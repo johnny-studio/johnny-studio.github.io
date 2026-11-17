@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="darkreader-lock">
+<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Johnny Studio: детейлинг и тюнинг Range Rover в Москве</title>
+<meta name="description" content="Фары и рестайлинг Range Rover, оклейка полиуретаном, полировка и керамика, тонировка, вмятины без покраски. Москва, Тюменский проезд, 5 с2. Ежедневно 10–20. 5,0 на Яндекс Картах.">
+<meta name="theme-color" content="#0a0908">
+<meta property="og:title" content="Johnny Studio: Range Rover знаем наизусть">
+<meta property="og:image" content="https://johnny-studio.github.io/img/p01.jpg">
+<meta property="og:description" content="Детейлинг и тюнинг в Москве. 5,0 ★ на Яндекс Картах, 72 оценки.">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800;900&subset=cyrillic&display=swap" rel="stylesheet">
+<style>
+/* ===== Токены: цвета и шрифты меняются здесь ===== */
+:root{
+  --bg:#0a0908; --bg2:#12100c; --card:#18150f; --ink:#f4f5f6; --dim:#9ea3a9; --line:rgba(255,255,255,.12);
+  --acc:#d9b25f; --accInk:#111111; --accSoft:rgba(217,178,95,.15); --star:#ffcc33;
+  --d:"Inter Tight","Inter",system-ui,sans-serif; --b:"Inter",system-ui,sans-serif;
+  --pad:max(20px,env(safe-area-inset-left,0px)); --r:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--b);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
+
+/* Кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 26px;font:700 15px var(--b);white-space:nowrap;cursor:pointer;border:0;transition:transform .2s,box-shadow .2s,background .2s}
+.btn.acc{background:var(--acc);color:var(--accInk);box-shadow:0 14px 40px -14px var(--acc)}
+.btn.gh{border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.03)}
+.btn:hover{transform:translateY(-2px)}
+.btn.acc:hover{box-shadow:0 18px 50px -10px var(--acc)}
+.btn svg{width:18px;height:18px;flex-shrink:0}
+
+/* Шапка */
+header{position:sticky;top:0;z-index:50;background:rgba(10,9,8,.94);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font:800 19px var(--d);letter-spacing:-.01em;text-transform:uppercase;flex-shrink:0}
+.logo .lg-img{width:40px;height:40px;border-radius:10px;object-fit:cover;border:1px solid var(--line)}
+.logo .bd i{font:italic 900 11px var(--d);color:#1b5fa8;border:1.5px solid #1b5fa8;border-radius:3px;padding:1px 3px;letter-spacing:.02em}
+.logo b{color:var(--acc);font-weight:800}
+header nav{display:flex;gap:30px;font:500 14px var(--b);color:var(--dim)}
+header nav a:hover{color:var(--ink)}
+header .r{display:flex;align-items:center;gap:20px;font:600 15px var(--b);flex-shrink:0}
+header .btn{padding:12px 24px}
+
+/* Hero */
+.hero{position:relative;padding:44px 0 44px}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(45% 60% at 80% 40%,rgba(217,178,95,.12),transparent 70%),radial-gradient(40% 50% at 0% 0%,rgba(255,255,255,.04),transparent 60%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 16px 8px 10px;font:500 14px var(--b);color:#dcdde0}
+.pill .st{white-space:nowrap;background:var(--star);color:#111;border-radius:999px;padding:2px 9px;font:800 13px var(--b)}
+h1{font-family:var(--d);font-weight:900;font-size:clamp(44px,6vw,84px);line-height:1;letter-spacing:-.03em;margin:22px 0 20px;text-transform:uppercase;text-wrap:balance}
+h1 em{font-style:normal;color:var(--acc)}
+.lead{font-size:18px;color:var(--dim);max-width:540px}
+.trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;color:var(--dim);font:500 14px var(--b)}
+.trust span:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--acc);margin-right:9px;vertical-align:1px}
+
+/* Калькулятор в первом экране (цены — в скрипте, блок PRICE) */
+.qc{margin-top:28px;border:1px solid var(--line);background:rgba(20,22,26,.85);border-radius:var(--r);padding:22px;max-width:560px}
+.qc .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:14px}
+.qc .top b{font:600 15px var(--b)}
+.qc .top small{color:var(--dim);font-size:12.5px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.seg button{border:1px solid var(--line);background:transparent;color:#cfd2d6;border-radius:14px;padding:12px 6px;font:600 14px var(--b);cursor:pointer;transition:.2s}
+.seg button.on{border-color:var(--acc);color:var(--ink);background:var(--accSoft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{border:1px solid var(--line);background:transparent;color:#cfd2d6;border-radius:999px;padding:9px 14px;font:600 13.5px var(--b);cursor:pointer;transition:.2s}
+.chips button.on{background:#f4f5f6;color:#111;border-color:#f4f5f6}
+.qc .res{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:18px;padding-top:18px;border-top:1px dashed var(--line)}
+.qc .tot{font:900 clamp(32px,3.6vw,42px)/1 var(--d);letter-spacing:-.02em}
+.qc .res small{display:block;color:var(--dim);font-size:12.5px;margin-top:6px}
+.qc .ask{color:var(--dim);font-size:12.5px;margin-top:10px;min-height:1em}
+
+/* Фото справа */
+.vis{position:relative;height:640px}
+.ph{position:absolute;inset:0 0 0 52px;border-radius:30px;overflow:hidden;box-shadow:0 50px 90px -30px rgba(0,0,0,.9);border:1px solid rgba(255,255,255,.1);background:#15171a}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.ph:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.7) 100%)}
+.tag{position:absolute;top:20px;left:74px;z-index:2;font:600 12px var(--b);letter-spacing:.12em;text-transform:uppercase;background:rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:8px 14px}
+.tag i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--acc);margin-right:8px;vertical-align:1px;box-shadow:0 0 10px var(--acc)}
+.thumbs{position:absolute;left:0;top:34%;z-index:3;display:grid;gap:12px}
+.thumbs button{width:112px;height:112px;border-radius:18px;overflow:hidden;border:3px solid var(--bg);box-shadow:0 20px 40px -10px rgba(0,0,0,.8);padding:0;cursor:zoom-in;background:#15171a}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.quote{position:absolute;left:74px;right:22px;bottom:22px;z-index:2;background:rgba(14,15,18,.88);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:18px 20px}
+.quote .s{color:var(--star);letter-spacing:2px;font-size:13px}
+.quote p{font:500 16px/1.45 var(--b);margin:6px 0 8px}
+.quote small{color:var(--dim);font-size:12.5px}
+
+/* Бегущая строка */
+.mq{border-block:1px solid var(--line);overflow:hidden;padding:18px 0}
+.mq .t{display:flex;gap:40px;width:max-content;animation:mq 34s linear infinite;will-change:transform;font:800 20px var(--d);text-transform:uppercase;color:#d6d8dc}
+.mq .t span:nth-child(even){color:var(--acc)}
+.off .t,.off .dot:before,.off .dot:after{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* Секции */
+section{padding:110px 0}
+.num{display:flex;align-items:center;gap:12px;font:600 12px var(--b);letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.num:before{content:"";width:34px;height:1px;background:var(--dim)}
+h2{font-family:var(--d);font-weight:900;font-size:clamp(30px,4.4vw,56px);line-height:1.08;letter-spacing:-.015em;text-transform:uppercase;margin:18px 0;text-wrap:balance}
+h2 em{font-style:normal;color:var(--dim)}
+.sub{color:var(--dim);font-size:18px;max-width:620px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px;flex-wrap:wrap}
+.alt{background:var(--bg2);border-block:1px solid var(--line)}
+
+/* До / после: тянуть ползунок пальцем или мышкой */
+.ba{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.cmp{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:3/4;max-height:720px;border:1px solid var(--line);touch-action:pan-y;user-select:none;cursor:ew-resize;background:#111}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cmp .af{clip-path:inset(0 0 0 var(--p,50%))}
+.cmp .ln{position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;background:#fff;transform:translateX(-1px);pointer-events:none}
+.cmp .kn{position:absolute;top:50%;left:var(--p,50%);width:52px;height:52px;border-radius:50%;background:#fff;color:#111;transform:translate(-50%,-50%);display:grid;place-items:center;font:800 18px var(--b);box-shadow:0 10px 30px rgba(0,0,0,.5);pointer-events:none}
+.cmp .lb1,.cmp .lb2{position:absolute;top:14px;padding:6px 12px;border-radius:999px;background:rgba(0,0,0,.65);font:600 12px var(--b);letter-spacing:.1em;text-transform:uppercase;pointer-events:none}
+.cmp .lb1{left:14px}.cmp .lb2{right:14px;background:var(--acc)}
+.ba ul{list-style:none;display:grid;gap:14px;margin:26px 0 30px}
+.ba li{display:flex;gap:12px;color:#d6d8dc}
+.ba li:before{content:"✓";color:var(--acc);font-weight:800}
+
+/* Услуги */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.s-card{position:relative;border:1px solid var(--line);background:var(--card);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
+.s-card:hover{border-color:rgba(255,255,255,.3);transform:translateY(-4px)}
+.s-card .im{aspect-ratio:16/11;overflow:hidden;position:relative;background:#15171a}
+.s-card .im img{width:100%;height:100%;object-fit:cover;object-position:50% 55%;transition:transform .6s}
+.s-card:hover .im img{transform:scale(1.06)}
+.svc-tag{position:absolute;top:14px;left:14px;z-index:2;font:700 11px var(--b);letter-spacing:.12em;text-transform:uppercase;background:var(--acc);color:var(--accInk);border-radius:999px;padding:6px 11px}
+.s-card .bd{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.s-card h3{font:800 22px/1.2 var(--d);text-transform:uppercase}
+.s-card p{color:var(--dim);font-size:15px}
+.s-card .pr{margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line);font:700 16px var(--b)}
+.s-card .pr a{font-size:14px;color:var(--dim)}
+.s-card .pr a:hover{color:var(--ink)}
+
+/* Прайс строками */
+.price{border-top:1px solid var(--line)}
+.price .row{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.price b{font:700 18px var(--b)}
+.price p{color:var(--dim);font-size:14.5px;margin-top:2px}
+.price .v{font:800 22px var(--d);white-space:nowrap}
+.price .v small{font:500 13px var(--b);color:var(--dim);margin-right:4px}
+.note{color:var(--dim);font-size:14px;margin-top:20px}
+
+/* Работы */
+.gal{columns:4 240px;column-gap:14px}
+.gal button{display:block;width:100%;margin-bottom:14px;border:0;padding:0;background:#15171a;border-radius:18px;overflow:hidden;cursor:zoom-in;break-inside:avoid}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .6s}
+.gal button:hover img{transform:scale(1.05)}
+.lbx{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.93);display:none;align-items:center;justify-content:center;padding:20px}
+.lbx.on{display:flex}
+.lbx img{max-width:100%;max-height:88vh;border-radius:14px}
+.lbx button{position:absolute;background:rgba(255,255,255,.1);border:1px solid var(--line);color:#fff;width:48px;height:48px;border-radius:50%;font-size:22px;cursor:pointer}
+.lbx .x{top:18px;right:18px}.lbx .p{left:18px;top:50%}.lbx .n{right:18px;top:50%}
+
+/* Как проходит */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{border-top:1px solid var(--line);padding-top:22px}
+.step b{display:block;font:900 54px/1 var(--d);color:#33373d;letter-spacing:-.04em;margin-bottom:16px}
+.step h3{font:800 20px/1.25 var(--d);text-transform:uppercase;margin-bottom:8px}
+.step p{color:var(--dim);font-size:15px}
+
+/* Мастер / студия */
+.master{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.master .im{border-radius:30px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line);background:#15171a}
+.master .im img{width:100%;height:100%;object-fit:cover}
+.stats{display:flex;gap:40px;margin-top:30px;flex-wrap:wrap}
+.stats b{display:block;font:900 46px/1.05 var(--d);letter-spacing:-.02em}
+.stats span{color:var(--dim);font-size:14px}
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
+.perk{border:1px solid var(--line);border-radius:18px;padding:18px;background:var(--card)}
+.perk i{font-style:normal;font-size:22px}
+.perk h4{font:700 16px var(--b);margin:8px 0 4px}
+.perk p{color:var(--dim);font-size:14px}
+
+/* Отзывы */
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rv{border:1px solid var(--line);background:var(--card);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:14px}
+.rv .s{color:var(--star);letter-spacing:2px;font-size:14px}
+.rv p{font-size:15.5px;color:#dedfe2}
+.rv .a{margin-top:auto;display:flex;align-items:center;gap:12px;font:600 14px var(--b)}
+.rv .a i{width:38px;height:38px;border-radius:50%;background:#23262b;display:grid;place-items:center;font-style:normal;font-weight:700}
+.rv .a small{display:block;color:var(--dim);font-weight:500;font-size:12.5px}
+.rev-more{margin-top:28px;display:flex;justify-content:center}
+
+/* FAQ */
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:24px 40px 24px 0;font:700 18px var(--b);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:4px;top:18px;font:300 30px var(--b);color:var(--dim);transition:transform .3s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details p{padding:0 0 24px;color:var(--dim);max-width:720px}
+
+/* Контакты */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.box{border:1px solid var(--line);background:var(--card);border-radius:var(--r);padding:26px}
+.contact .box{display:flex;flex-direction:column;gap:22px}
+.crow small{display:block;color:var(--dim);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.crow a,.crow span{font:700 20px/1.35 var(--b)}
+.contact .btns{display:flex;flex-wrap:wrap;gap:10px}
+/* Карточка-карта: рисованная схема; живая карта Яндекса грузится по кнопке */
+.map{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:440px;background:#0f1114}
+.map svg.roads{position:absolute;inset:0;width:100%;height:100%}
+.map .glow{position:absolute;left:50%;top:42%;width:340px;height:340px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(217,178,95,.18),transparent 65%);pointer-events:none}
+.pin{position:absolute;left:50%;top:42%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;z-index:2}
+.pin .lg{width:64px;height:64px;border-radius:50%;border:3px solid var(--acc);background:#000;overflow:hidden;box-shadow:0 14px 40px -6px rgba(0,0,0,.9)}.pin .lg img{width:100%;height:100%;object-fit:cover}
+.pin .stem{width:3px;height:18px;background:var(--acc)}
+.pin .dot{width:12px;height:12px;border-radius:50%;background:var(--acc);position:relative}
+.pin .dot:before,.pin .dot:after{content:"";position:absolute;inset:-10px;border-radius:50%;border:2px solid var(--acc);opacity:0;animation:ping 2.4s ease-out infinite}
+.pin .dot:after{animation-delay:1.2s}
+@keyframes ping{0%{transform:scale(.4);opacity:.8}100%{transform:scale(2.6);opacity:0}}
+.pin .lbl{position:absolute;left:78px;top:14px;white-space:nowrap;background:rgba(14,15,18,.88);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font:700 14px var(--b)}
+.pin .lbl small{display:block;color:var(--dim);font-weight:500;font-size:12px}
+.map .chip{position:absolute;top:16px;left:16px;z-index:2;font:600 12px var(--b);letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.55);border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:#cfd2d6}
+.map .panel{position:absolute;left:14px;right:14px;bottom:14px;z-index:3;display:grid;grid-template-columns:1fr 1fr;gap:8px;background:rgba(14,15,18,.92);border:1px solid var(--line);border-radius:18px;padding:10px}
+.map .panel .btn{padding:13px 12px;font-size:14px}
+.map .panel .live{grid-column:1/-1;background:none;border:0;color:var(--dim);font:600 13px var(--b);padding:6px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:4}
+.map .close{position:absolute;top:12px;right:12px;z-index:5;display:none}
+.map.live .close{display:inline-flex}
+
+/* Финал */
+.final{text-align:center;padding:120px 0 130px;background:radial-gradient(50% 70% at 50% 100%,rgba(217,178,95,.13),transparent 70%)}
+.final h2{max-width:900px;margin:18px auto}
+.final .sub{margin:0 auto 32px}
+.final .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--dim);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* Липкая панель на телефоне */
+.dock{display:none}
+
+/* Появление при скролле */
+.js [data-rv]{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--dl,0s)}
+.js [data-rv=zoom]{transform:scale(.95)}
+.js [data-rv=left]{transform:translateX(-36px)}
+.js [data-rv].in{opacity:1;transform:none}
+
+/* ===== Адаптив ===== */
+@media (max-width:1080px){
+  header nav{display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:36px}
+  .vis{height:560px}
+  .svc,.rev{grid-template-columns:1fr 1fr}
+  .ba{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr;gap:28px}
+  .master{grid-template-columns:1fr;gap:36px}
+  .master .im{aspect-ratio:4/3}
+}
+@media (max-width:640px){
+  section{padding:76px 0}
+  header .wrap{height:62px}
+  header .r .ph-n{display:none}
+  .logo{font-size:15px;gap:9px}.logo .lg-img{width:34px;height:34px}
+  header .btn{padding:10px 16px;font-size:14px}
+  .hero{padding:26px 0 30px}
+  h1{font-size:clamp(40px,12.5vw,56px);margin:18px 0 14px}
+  .lead{font-size:16.5px}
+  .pill{font-size:13px}.pill .hm{display:none}
+  .qc{padding:16px;margin-top:22px}
+  .qc .top small{display:none}
+  .seg button{font-size:13px;padding:11px 4px}
+  .chips button{font-size:13px;padding:8px 12px}
+  .qc .res{flex-direction:column;align-items:stretch;gap:14px}
+  .vis{height:470px}
+  .ph{inset:0;border-radius:24px}
+  .thumbs{display:none}
+  .tag{left:14px;top:14px}
+  .quote{left:12px;right:12px;bottom:12px;padding:14px 16px}
+  .quote p{font-size:14.5px}
+  .svc,.rev,.perks,.contact{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .box{padding:20px}
+  .price .v{font-size:19px}.price b{font-size:16px}
+  .gal{columns:2;column-gap:10px}.gal button{margin-bottom:10px;border-radius:14px}
+  .stats{gap:26px}.stats b{font-size:38px}
+  .map{min-height:420px}
+  .pin,.map .glow{left:30%;top:40%}
+  .pin .lbl{left:72px}
+  .faq summary{font-size:16px}
+  body{padding-bottom:84px}
+  .dock{display:grid;grid-template-columns:1fr 1fr 56px;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px var(--pad) max(10px,env(safe-area-inset-bottom));background:rgba(8,9,11,.96);border-top:1px solid var(--line)}
+  .dock .btn{padding:14px 10px;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{animation:none!important;transition:none!important}
+  .js [data-rv]{opacity:1;transform:none}
+}
+
+.brands{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center;margin-top:44px;font:800 22px var(--d);text-transform:uppercase;color:#5d5d5a;letter-spacing:.02em}
+.logo span b{color:var(--acc)}
+.dock{grid-template-columns:1fr 1fr 56px}
+/* Блок Range Rover: сетка 2×2 из фото */
+.rrgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rrgrid button{border:0;padding:0;border-radius:20px;overflow:hidden;cursor:zoom-in;background:#15171a;aspect-ratio:3/4}
+.rrgrid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.rrgrid button:hover img{transform:scale(1.05)}
+.logo span b{color:var(--acc)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo"><img class="lg-img" src="img/logo.jpg" alt="" width="40" height="40"><span>Johnny <b>Studio</b></span></a>
+    <nav><a href="#rr">Range Rover</a><a href="#services">Услуги</a><a href="#works">Работы</a><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+    <div class="r"><a class="ph-n" href="tel:+79623634212">+7 (962) 363-42-12</a><a class="btn acc" data-tg href="#" target="_blank" rel="noopener">Записаться</a></div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <a class="pill" href="https://yandex.ru/maps/org/152411231869/reviews/" target="_blank" rel="noopener"><span class="st">★&nbsp;5,0</span><span>72 оценки на Яндекс Картах<span class="hm"> · Москва</span></span></a>
+      <h1>Range Rover <em>знаем наизусть</em></h1>
+      <p class="lead">Фары и рестайлинг Range Rover, оклейка полиуретаном, полировка с керамикой, тонировка и вмятины без покраски. Работаем с любыми марками, а Land Rover знаем как свои пять пальцев.</p>
+
+      <!-- Калькулятор: кузов + услуги. Цены и коэффициенты в скрипте, блок PRICE -->
+      <div class="qc" id="calc">
+        <div class="top"><b>Цена для вашей машины за 30 секунд</b><small>примерный расчёт</small></div>
+        <div class="seg" id="body"><button data-k="0">Седан</button><button data-k="1">Кроссовер</button><button data-k="2" class="on">Внедорожник</button></div>
+        <div class="chips" id="svcs"></div>
+        <div class="res">
+          <div><div class="tot" id="tot">0 ₽</div><small>точную цену назовём до начала работ</small></div>
+          <a class="btn acc" id="wa" href="#" target="_blank" rel="noopener">Записаться на эту сумму →</a>
+        </div>
+        <div class="ask" id="ask"></div>
+      </div>
+      <div class="trust"><span id="open">Ежедневно 10–20</span><span>Евгений и мастер Александр</span><span>Без навязывания</span></div>
+    </div>
+
+    <div class="vis" data-rv="zoom">
+      <div class="ph"><img src="img/p01.jpg" alt="Range Rover Sport в боксе Johnny Studio" fetchpriority="high"></div>
+      <div class="tag"><i></i>Работа студии</div>
+      <div class="thumbs"><button data-g="4" aria-label="Открыть фото"><img src="img/p05.jpg" alt="Фары Range Rover"></button><button data-g="9" aria-label="Открыть фото"><img src="img/p10.jpg" alt="Фонари Range Rover"></button></div>
+      <div class="quote"><div class="s">★★★★★</div><p>«Уход за автомобилем доверяю Евгению полностью. Автомобили марки Land Rover знают как свои пять пальцев»</p><small>Илья К. · отзыв на Яндекс Картах</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true"><div class="t">
+  <span>Фары</span><span>✦</span><span>Рестайлинг</span><span>✦</span><span>Полиуретан</span><span>✦</span><span>Керамика</span><span>✦</span><span>Тонировка</span><span>✦</span><span>Вмятины</span><span>✦</span>
+  <span>Фары</span><span>✦</span><span>Рестайлинг</span><span>✦</span><span>Полиуретан</span><span>✦</span><span>Керамика</span><span>✦</span><span>Тонировка</span><span>✦</span><span>Вмятины</span><span>✦</span>
+</div></div>
+
+<!-- ===== RANGE ROVER: главная фишка студии (по отзывам) ===== -->
+<section id="rr">
+  <div class="wrap ba">
+    <div class="rrgrid" data-rv="zoom">
+      <button data-g="5" aria-label="Открыть фото"><img src="img/p06.jpg" alt="Фары Range Rover в стиле рестайлинга" loading="lazy"></button>
+      <button data-g="6" aria-label="Открыть фото"><img src="img/p07.jpg" alt="Мультимедиа и климат Range Rover" loading="lazy"></button>
+      <button data-g="9" aria-label="Открыть фото"><img src="img/p10.jpg" alt="Задние фонари Range Rover" loading="lazy"></button>
+      <button data-g="3" aria-label="Открыть фото"><img src="img/p04.jpg" alt="Range Rover в боксе" loading="lazy"></button>
+    </div>
+    <div>
+      <div class="num">01 · Range Rover</div>
+      <h2>Соберём <em>почти новую машину</em></h2>
+      <p class="sub">«Из неприметного авто получилось собрать почти новую машину», пишут клиенты. В боксе обычно стоит несколько Range Rover, поэтому Евгений может наглядно показать, как будет выглядеть ваша.</p>
+      <ul>
+        <li>Фары и фонари в стиле рестайлинга на L494 и L405</li>
+        <li>Рестайлинг салона: климат, мультимедиа, руль с кнопками</li>
+        <li>Решётка, зеркала, шильдики, динамические поворотники</li>
+        <li>Камеры, доводчики и другие доработки</li>
+      </ul>
+      <a class="btn acc" data-tg-rr href="#" target="_blank" rel="noopener">Что подойдёт моей машине →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== УСЛУГИ ===== -->
+<section id="services" class="alt">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="num">02 · Услуги</div><h2>Что делаем <em>с машиной</em></h2></div>
+      <p class="sub">Евгений подскажет, что действительно нужно вашей машине, и назовёт цену до начала работ. Без навязывания лишнего.</p>
+    </div>
+    <div class="svc">
+      <article class="s-card" data-rv><div class="im"><span class="svc-tag">Хит</span><img src="img/p05.jpg" alt="Фары Range Rover" loading="lazy"></div><div class="bd">
+        <h3>Фары и фонари</h3><p>Ставим фары и фонари, часто сразу закрываем их бронеплёнкой. Range Rover, Skoda, Golf, Chevrolet и другие.</p>
+        <div class="pr"><span data-p="Установка фар"></span><a href="#calc">Рассчитать →</a></div></div></article>
+      <article class="s-card" data-rv style="--dl:.08s"><div class="im"><img src="img/p01.jpg" alt="Range Rover Sport в плёнке" loading="lazy"></div><div class="bd">
+        <h3>Оклейка полиуретаном</h3><p>Зоны риска или вся машина, прозрачная или цветная плёнка. Работаем с проверенными материалами.</p>
+        <div class="pr"><span data-p="Оклейка зон риска"></span><a href="#calc">Рассчитать →</a></div></div></article>
+      <article class="s-card" data-rv style="--dl:.16s"><div class="im"><img src="img/p03.jpg" alt="BMW после полировки" loading="lazy"></div><div class="bd">
+        <h3>Полировка и керамика</h3><p>«Лучшая полировка, какую я видел», пишут клиенты. После работы расскажем, как ухаживать за машиной.</p>
+        <div class="pr"><span data-p="Полировка и керамика"></span><a href="#calc">Рассчитать →</a></div></div></article>
+      <article class="s-card" data-rv><div class="im"><img src="img/p02.jpg" alt="Range Rover в работе" loading="lazy"></div><div class="bd">
+        <h3>Вмятины без покраски</h3><p>Убираем вмятины без следов, часто день в день за пару часов. Честно скажем, если деталь нужно красить.</p>
+        <div class="pr"><span data-p="Удаление вмятин"></span><a href="#calc">Рассчитать →</a></div></div></article>
+      <article class="s-card" data-rv style="--dl:.08s"><div class="im"><img src="img/p04.jpg" alt="Range Rover в боксе" loading="lazy"></div><div class="bd">
+        <h3>Тонировка</h3><p>Атермалка на передние, задняя полусфера в любой процент. Клеим настоящую плёнку LLumar.</p>
+        <div class="pr"><span data-p="Задняя полусфера"></span><a href="#calc">Рассчитать →</a></div></div></article>
+      <article class="s-card" data-rv style="--dl:.16s"><div class="im"><img src="img/p07.jpg" alt="Мультимедиа Range Rover" loading="lazy"></div><div class="bd">
+        <h3>Дооснащение</h3><p>Магнитолы, камеры, руль с кнопками, мультимедиа и климат. Попутно поправим недочёты за другими мастерами.</p>
+        <div class="pr"><span data-p="Дооснащение"></span><a data-tg-rr href="#" target="_blank" rel="noopener">Спросить →</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== РАБОТЫ ===== -->
+<section id="works">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="num">03 · Работы</div><h2>Машины <em>из нашего бокса</em></h2></div>
+      <p class="sub">Реальные фото студии с Яндекс Карт. Нажмите, чтобы рассмотреть.</p>
+    </div>
+    <div class="gal" id="gal">
+      <button data-rv><img src="img/p01.jpg" alt="Range Rover Sport" loading="lazy"></button>
+      <button data-rv><img src="img/p02.jpg" alt="Range Rover в работе" loading="lazy"></button>
+      <button data-rv><img src="img/p03.jpg" alt="BMW" loading="lazy"></button>
+      <button data-rv><img src="img/p04.jpg" alt="Range Rover" loading="lazy"></button>
+      <button data-rv><img src="img/p05.jpg" alt="Фары Range Rover" loading="lazy"></button>
+      <button data-rv><img src="img/p06.jpg" alt="Фары рестайлинг" loading="lazy"></button>
+      <button data-rv><img src="img/p07.jpg" alt="Мультимедиа Range Rover" loading="lazy"></button>
+      <button data-rv><img src="img/p08.jpg" alt="Range Rover на диагностике" loading="lazy"></button>
+      <button data-rv><img src="img/p09.jpg" alt="Суппорта" loading="lazy"></button>
+      <button data-rv><img src="img/p10.jpg" alt="Фонари Range Rover" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+<div class="lbx" id="lbx"><img alt=""><button class="x" aria-label="Закрыть">×</button><button class="p" aria-label="Назад">‹</button><button class="n" aria-label="Вперёд">›</button></div>
+
+<!-- ===== ЦЕНЫ: строки собираются из блока PRICE в скрипте ===== -->
+<section id="prices" class="alt">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="num">04 · Цены</div><h2>Цены <em>без сюрпризов</em></h2></div>
+      <p class="sub">«За вменяемый прайс, на который договаривались», пишут клиенты. Цену называем до начала работ.</p>
+    </div>
+    <div class="price" id="plist"></div>
+    <p class="note">Итог зависит от машины и выбранных материалов. Точную сумму Евгений назовёт до начала работ.</p>
+  </div>
+</section>
+
+<!-- ===== КАК ПРОХОДИТ ===== -->
+<section>
+  <div class="wrap">
+    <div class="head"><div><div class="num">05 · Процесс</div><h2>Как это <em>происходит</em></h2></div></div>
+    <div class="steps">
+      <div class="step" data-rv><b>01</b><h3>Пишете или звоните</h3><p>Евгений подскажет, что можно сделать с вашей машиной, и назовёт цену.</p></div>
+      <div class="step" data-rv style="--dl:.08s"><b>02</b><h3>Приезжаете</h3><p>Тюменский проезд, есть парковка. Пока ждёте, есть кофе и Wi‑Fi.</p></div>
+      <div class="step" data-rv style="--dl:.16s"><b>03</b><h3>Делаем</h3><p>Аккуратно и в срок, на проверенных материалах. Попутно подскажем, если что-то ещё стоит поправить.</p></div>
+      <div class="step" data-rv style="--dl:.24s"><b>04</b><h3>Забираете</h3><p>Расскажем, как ухаживать за машиной и на каких мойках лучше мыться.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== СТУДИЯ ===== -->
+<section class="alt">
+  <div class="wrap master">
+    <div class="im" data-rv="left"><img src="img/p04.jpg" alt="Бокс Johnny Studio" loading="lazy"></div>
+    <div>
+      <div class="num">06 · Студия</div>
+      <h2>Евгений <em>и команда</em></h2>
+      <p class="sub">«Евгению можно доверить что угодно и не задумываться, халтуры точно не будет», пишут клиенты. Многие приезжают второй и третий раз и привозят машины жён и друзей.</p>
+      <div class="stats">
+        <div><b>5,0</b><span>рейтинг на Яндексе</span></div>
+        <div><b>72</b><span>оценки клиентов</span></div>
+        <div><b>10–20</b><span>ежедневно</span></div>
+      </div>
+      <div class="perks">
+        <div class="perk"><i>🔧</i><h4>Land Rover наизусть</h4><p>Фары, салон, электрика и тюнинг для Range Rover.</p></div>
+        <div class="perk"><i>🤝</i><h4>Без навязывания</h4><p>Советуем по делу и честно говорим, что не нужно.</p></div>
+        <div class="perk"><i>☕</i><h4>Кофе и Wi‑Fi</h4><p>Можно подождать машину в студии, есть парковка.</p></div>
+        <div class="perk"><i>💳</i><h4>Оплата как удобно</h4><p>Перевод, QR-код, карта или наличные.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ОТЗЫВЫ (реальные, с Яндекс Карт) ===== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="num">07 · Отзывы</div><h2>5,0 из 5 <em>на Яндекс Картах</em></h2></div>
+      <p class="sub">66 отзывов. Чаще всего пишут: аккуратно, без навязывания, приеду ещё.</p>
+    </div>
+    <div class="rev">
+      <div class="rv" data-rv><div class="s">★★★★★</div><p>Делал свой РР у Евгения! Меняли практически всё! Из неприметного авто получилось собрать почти новую машину, которая смотрится лучше, чем её последователь! Учёл все пожелания и порекомендовал несколько решений.</p><div class="a"><i>Д</i><div>Денис С.<small>Range Rover</small></div></div></div>
+      <div class="rv" data-rv style="--dl:.08s"><div class="s">★★★★★</div><p>Делал на своём ренджике полировку и керамику, результат огонь! Евгений всё рассказал, как ухаживать за машиной и на каких мойках лучше мыться. Привезу ещё машину жены!</p><div class="a"><i>Д</i><div>Дмитрий Л.<small>Полировка и керамика</small></div></div></div>
+      <div class="rv" data-rv style="--dl:.16s"><div class="s">★★★★★</div><p>Мастер своего дела на 100%: чётко, красиво, самое главное дотошно до каждой мелочи! Сервис и качество на высшем уровне! Лучшая полировка, какую я видел!</p><div class="a"><i>В</i><div>Василий Ковалев<small>Полировка</small></div></div></div>
+      <div class="rv" data-rv><div class="s">★★★★★</div><p>Заехал оценить состояние плёнки на фарах, плёнке уже 3 года. С Женей обсудили варианты и решили сделать полировку. Без навязывания лишних услуг, конструктивно и по делу.</p><div class="a"><i>А</i><div>Андрей З.<small>Фары</small></div></div></div>
+      <div class="rv" data-rv style="--dl:.08s"><div class="s">★★★★★</div><p>Всё на высшем уровне! Три вмятины убрали, всё очень быстро, день в день за пару часов, следов нет, мы очень довольны!</p><div class="a"><i>Е</i><div>Елизавета С.<small>Вмятины без покраски</small></div></div></div>
+      <div class="rv" data-rv style="--dl:.16s"><div class="s">★★★★★</div><p>Приезжал на установку фар и фонарей на свой Рендж Ровер. Евгений всё рассказал и показал даже наглядно, как может выглядеть моя машина, так как в боксе стояло несколько ренджей.</p><div class="a"><i>А</i><div>Артем Г.<small>Фары и фонари</small></div></div></div>
+    </div>
+    <div class="rev-more"><a class="btn gh" href="https://yandex.ru/maps/org/152411231869/reviews/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах →</a></div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="num">08 · Вопросы</div><h2>Частые <em>вопросы</em></h2>
+    <div class="faq">
+      <details><summary>Вы работаете только с Range Rover?</summary><p>Нет, с любыми марками: BMW, Skoda, Volkswagen, Hyundai, Volvo и другими. Просто Land Rover знаем особенно хорошо и для них есть много доработок.</p></details>
+      <details><summary>Сколько стоит?</summary><p>Ориентиры есть в прайсе выше, а точную цену Евгений назовёт до начала работ. Напишите марку машины и что хотите сделать.</p></details>
+      <details><summary>Сколько времени занимает работа?</summary><p>Фары ставим примерно за час, вмятины часто убираем день в день. Оклейка и полировка дольше, срок скажем при записи.</p></details>
+      <details><summary>Как можно оплатить?</summary><p>Переводом, по QR-коду, картой или наличными. Можно оплатить после работы.</p></details>
+      <details><summary>Где вы находитесь?</summary><p>Москва, Тюменский проезд, 5, стр. 2. Ежедневно с 10:00 до 20:00, есть парковка.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== КОНТАКТЫ ===== -->
+<section id="contacts">
+  <div class="wrap">
+    <div class="head"><div><div class="num">09 · Контакты</div><h2>Ждём <em>в студии</em></h2></div></div>
+    <div class="contact">
+      <div class="box" data-rv>
+        <div class="crow"><small>Телефон</small><a href="tel:+79623634212">+7 (962) 363-42-12</a></div>
+        <div class="crow"><small>Telegram</small><a data-tg href="#" target="_blank" rel="noopener">@johnnypolishmycar</a></div>
+        <div class="crow"><small>Адрес</small><span>Москва, Тюменский проезд, 5, стр. 2</span></div>
+        <div class="crow"><small>Режим</small><span>Ежедневно, 10:00–20:00</span></div>
+        <div class="btns">
+          <a class="btn acc" data-tg href="#" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn gh" href="tel:+79623634212">Позвонить</a>
+        </div>
+      </div>
+      <div class="map" id="map" data-rv style="--dl:.1s">
+        <svg class="roads" viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="#17140e"><rect x="30" y="40" width="150" height="110" rx="10"/><rect x="210" y="30" width="120" height="80" rx="10"/><rect x="390" y="20" width="180" height="100" rx="10"/><rect x="20" y="190" width="120" height="140" rx="10"/><rect x="170" y="230" width="110" height="170" rx="10"/><rect x="420" y="250" width="160" height="150" rx="10"/></g>
+          <g fill="#13201b" opacity=".9"><rect x="330" y="130" width="250" height="90" rx="30"/></g>
+          <g stroke="#2a261d" stroke-width="16" fill="none" stroke-linecap="round"><path d="M-20 172 C120 160 240 220 360 214 S520 230 640 226"/><path d="M196 -20 C190 120 160 300 152 460"/></g>
+          <g stroke="#221f18" stroke-width="7" fill="none" stroke-linecap="round"><path d="M0 362 C140 352 260 420 420 412"/><path d="M290 214 L300 440"/></g>
+          <path d="M152 460 C158 330 200 250 300 214" stroke="#d9b25f" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" fill="none" opacity=".8"/>
+        </svg>
+        <div class="glow"></div>
+        <span class="chip">Москва · Тюменский проезд</span>
+        <div class="pin"><div class="lg"><img src="img/logo.jpg" alt=""></div><div class="stem"></div><div class="dot"></div>
+          <div class="lbl">Johnny Studio<small>Тюменский проезд, 5, стр. 2</small></div></div>
+        <div class="panel">
+          <a class="btn acc" href="https://yandex.ru/maps/?rtext=~55.80955%2C37.740983&rtt=auto" target="_blank" rel="noopener">Маршрут на машине</a>
+          <a class="btn gh" href="https://yandex.ru/maps/org/152411231869/" target="_blank" rel="noopener">На Яндекс Картах</a>
+          <button class="live" id="mapLive">Открыть живую карту</button>
+        </div>
+        <button class="btn gh close" id="mapClose" aria-label="Закрыть карту">×</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ФИНАЛ ===== -->
+<section class="final">
+  <div class="wrap">
+    <div class="num" style="justify-content:center">Запись</div>
+    <h2>Покажем, какой может <em>стать ваша машина</em></h2>
+    <p class="sub">Напишите марку машины и что хотите сделать. Евгений подскажет варианты, цену и свободное время.</p>
+    <div class="btns">
+      <a class="btn acc" data-tg href="#" target="_blank" rel="noopener">Записаться в Telegram</a>
+      <a class="btn gh" href="tel:+79623634212">Позвонить</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© Johnny Studio · детейлинг и тюнинг в Москве</span><span>Фары · Полиуретан · Керамика · Тонировка · Вмятины</span></div></footer>
+
+<div class="dock">
+  <a class="btn acc" data-tg href="#" target="_blank" rel="noopener">Telegram</a>
+  <a class="btn gh" href="#calc">Цена</a>
+  <a class="btn gh" href="tel:+79623634212" aria-label="Позвонить"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+/* ===== КОНТАКТЫ: Telegram студии (без @). Все кнопки data-tg открывают чат с готовым текстом «Я с сайта» ===== */
+const TG='johnnypolishmycar';
+const tg=t=>'https://t.me/'+TG+'?text='+encodeURIComponent(t);
+document.querySelectorAll('[data-tg]').forEach(a=>a.href=tg('Здравствуйте! Я с сайта, хочу записаться. Моя машина: '));
+document.querySelectorAll('[data-tg-rr]').forEach(a=>a.href=tg('Здравствуйте! Я с сайта. Подскажите, что можно сделать с моей машиной: '));
+
+/* ===== PRICE: цены «от» для седана и коэффициенты кузова =====
+   С Яндекс Карт: установка фар (6 000), оклейка зон риска (60 000), полная оклейка в цветной полиуретан (280 000).
+   ВНИМАНИЕ (для Дениса): остальное ОРИЕНТИРЫ, заменить на цены Johnny Studio, когда пришлёт.
+   null = цену называет мастер. [название, цена от, выбрано по умолчанию, пояснение для прайса, false = только в прайсе, true = цена не зависит от кузова] */
+const BODY=[['Седан',1],['Кроссовер',1.15],['Внедорожник',1.3]];
+const SVC=[
+  ['Установка фар',6000,true,'Фары в стиле рестайлинга, например на Range Rover L494 и L405',,true],
+  ['Бронь фар',4000,true,'Закрываем фары полиуретаном, чтобы не мутнели'],
+  ['Оклейка зон риска',60000,false,'Капот, бампер, фары, крылья, зеркала'],
+  ['Полировка и керамика',30000,false,'Полировка кузова и защитное покрытие'],
+  ['Задняя полусфера',6000,false,'Тонировка задних стёкол, плёнка LLumar'],
+  ['Удаление вмятин',null,false,'Без покраски, цену скажем по фото'],
+  ['Химчистка салона',12000,false,'Сиденья, пятна, потолок',false],
+  ['Антихром',15000,false,'Решётка, молдинги, шильдики в чёрный',false],
+  ['Полная оклейка в цветной полиуретан',280000,false,'Смена цвета и защита всего кузова',false],
+  ['Дооснащение',null,false,'Мультимедиа, камеры, руль, климат, доводчики',false],
+];
+let bk=2;
+const box=document.getElementById('svcs'),tot=document.getElementById('tot'),ask=document.getElementById('ask'),waBtn=document.getElementById('wa');
+const fmt=n=>n.toLocaleString('ru-RU').replace(/ |,/g,' ');
+const pr=(s,k)=>s[5]?s[1]:Math.round(s[1]*k/500)*500;
+SVC.filter(s=>s[4]!==false).forEach(s=>{const b=document.createElement('button');b.textContent=s[0];b.className=s[2]?'on':'';b.onclick=()=>{s[2]=!s[2];b.classList.toggle('on',s[2]);calc()};box.appendChild(b)});
+document.querySelectorAll('#body button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#body button').forEach(x=>x.classList.remove('on'));b.classList.add('on');bk=+b.dataset.k;calc()});
+let shown=0;
+function calc(){
+  const on=SVC.filter(s=>s[2]),k=BODY[bk][1];
+  const sum=on.filter(s=>s[1]).reduce((a,s)=>a+pr(s,k),0);
+  const q=on.filter(s=>!s[1]).map(s=>s[0].toLowerCase());
+  ask.textContent=q.length?'+ '+q.join(', ')+': цену назовёт мастер':'';
+  anim(sum);
+  const list=on.map(s=>s[0].toLowerCase()).join(', ')||'консультация';
+  waBtn.href=tg(`Здравствуйте! Я с сайта. ${BODY[bk][0]}: ${list}`+(sum?` ≈ ${fmt(sum)} ₽`:'')+`. Моя машина: `);
+}
+function anim(to){
+  const from=shown,t0=performance.now(),dur=matchMedia('(prefers-reduced-motion:reduce)').matches?0:450;
+  const step=t=>{const q=dur?Math.min(1,(t-t0)/dur):1,e=1-Math.pow(1-q,3);shown=Math.round(from+(to-from)*e);tot.textContent=(to?'≈ ':'')+fmt(shown)+' ₽';if(q<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step);
+}
+calc();
+/* Сразу показываем итог, без «0 ₽» до анимации */
+(()=>{const k=BODY[bk][1],s=SVC.filter(x=>x[2]&&x[1]).reduce((a,x)=>a+pr(x,k),0);shown=s;tot.textContent=(s?'≈ ':'')+fmt(s)+' ₽'})();
+/* Прайс строками и цены в карточках услуг из того же списка SVC */
+document.getElementById('plist').innerHTML=SVC.map(s=>`<div class="row" data-rv><div><b>${s[0]}</b><p>${s[3]}</p></div><div class="v">${s[1]?'<small>от</small>'+fmt(s[1])+' ₽':'<small>после осмотра</small>'}</div></div>`).join('');
+document.querySelectorAll('[data-p]').forEach(el=>{const s=SVC.find(x=>x[0]===el.dataset.p);el.textContent=s&&s[1]?'от '+fmt(s[1])+' ₽':'цену назовём'});
+
+/* Появление при скролле */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('[data-rv]').forEach(el=>io.observe(el));
+
+/* Пауза бесконечных анимаций, когда блок не виден */
+const po=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('off',!e.isIntersecting)));
+document.querySelectorAll('.mq,#map').forEach(el=>po.observe(el));
+
+/* Лайтбокс галереи (+ миниатюры в первом экране и блок Range Rover) */
+const gal=[...document.querySelectorAll('#gal img')],lbx=document.getElementById('lbx'),lbi=lbx.querySelector('img');let gi=0;
+const show=i=>{gi=(i+gal.length)%gal.length;lbi.src=gal[gi].src;lbi.alt=gal[gi].alt;lbx.classList.add('on')};
+gal.forEach((im,i)=>im.parentElement.addEventListener('click',()=>show(i)));
+document.querySelectorAll('.thumbs button,.rrgrid button').forEach(b=>b.onclick=()=>show(+b.dataset.g));
+lbx.querySelector('.x').onclick=()=>lbx.classList.remove('on');
+lbx.querySelector('.p').onclick=e=>{e.stopPropagation();show(gi-1)};
+lbx.querySelector('.n').onclick=e=>{e.stopPropagation();show(gi+1)};
+lbx.addEventListener('click',e=>{if(e.target===lbx)lbx.classList.remove('on')});
+addEventListener('keydown',e=>{if(!lbx.classList.contains('on'))return;if(e.key==='Escape')lbx.classList.remove('on');if(e.key==='ArrowLeft')show(gi-1);if(e.key==='ArrowRight')show(gi+1)});
+
+/* «Открыто / закрыто» по московскому времени. График: ежедневно 10–20 */
+(()=>{const n=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Moscow'})),h=n.getHours();
+ document.getElementById('open').textContent=(h>=10&&h<20)?'Сейчас открыто до 20:00':'Сейчас закрыто · пишите, ответим утром';})();
+
+/* Живая карта Яндекса подгружается только по кнопке */
+const map=document.getElementById('map');
+document.getElementById('mapLive').onclick=()=>{if(!map.querySelector('iframe')){const f=document.createElement('iframe');f.src='https://yandex.ru/map-widget/v1/?oid=152411231869&z=16';f.title='Johnny Studio на Яндекс Картах';f.allowFullscreen=true;map.appendChild(f)}map.classList.add('live')};
+document.getElementById('mapClose').onclick=()=>{map.querySelector('iframe')?.remove();map.classList.remove('live')};
+</script>
+</body>
+</html>
