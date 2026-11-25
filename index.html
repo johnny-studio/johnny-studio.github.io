@@ -11,13 +11,13 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Johnny Studio: Range Rover и Land Rover знаем наизусть">
 <meta property="og:description" content="Фары, рестайлинг, оклейка, антихром и тонировка. Москва, Тюменский проезд. 5,0 на Яндекс Картах, 72 оценки.">
-<meta property="og:image" content="https://johnny-studio.github.io/img/hero.jpg">
+<meta property="og:image" content="https://johnny-studio.github.io/img/hero.jpg?v=2">
 <meta property="og:url" content="https://johnny-studio.github.io/">
-<link rel="preload" href="img/hero.jpg" as="image">
+<link rel="preload" href="img/hero.jpg?v=2" as="image">
 <link rel="preload" href="fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <!-- SEO: карточка студии и вопросы для поиска. Цены тут только точные, с Яндекс Карт -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"AutoRepair","name":"Johnny Studio","alternateName":"Джони студио","url":"https://johnny-studio.github.io/","image":"https://johnny-studio.github.io/img/hero.jpg","logo":"https://johnny-studio.github.io/img/logo.jpg","telephone":"+7 962 363-42-12","priceRange":"6 000–280 000 ₽",
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Johnny Studio","alternateName":"Джони студио","url":"https://johnny-studio.github.io/","image":"https://johnny-studio.github.io/img/hero.jpg?v=2","logo":"https://johnny-studio.github.io/img/logo.jpg","telephone":"+7 962 363-42-12","priceRange":"6 000–280 000 ₽",
 "address":{"@type":"PostalAddress","streetAddress":"Тюменский проезд, 5, стр. 2","addressLocality":"Москва","addressCountry":"RU"},
 "geo":{"@type":"GeoCoordinates","latitude":55.80955,"longitude":37.740983},
 "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"20:00"},
@@ -31,7 +31,7 @@
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
- {"@type":"Question","name":"Вы работаете только с Range Rover?","acceptedAnswer":{"@type":"Answer","text":"Нет, с любыми марками: Skoda, Volkswagen, BMW, Volvo, Chevrolet и другими. Land Rover знаем особенно хорошо, для них много доработок."}},
+ {"@type":"Question","name":"Вы работаете только с Range Rover?","acceptedAnswer":{"@type":"Answer","text":"Профильно с Range Rover и Land Rover, для них много доработок. Работаем и с другими премиальными машинами: Jaguar, Mini, BMW, Lexus, Porsche, Audi. Детейлинг для любых марок на нашем втором сайте."}},
  {"@type":"Question","name":"Сколько стоит?","acceptedAnswer":{"@type":"Answer","text":"Установка фар на Range Rover L494 и L405 от 6 000 ₽, оклейка зон риска от 60 000 ₽, полная оклейка в цветной полиуретан от 280 000 ₽. Точную цену называем до начала работ."}},
  {"@type":"Question","name":"Сколько времени занимает работа?","acceptedAnswer":{"@type":"Answer","text":"Вмятины часто убираем день в день, полная оклейка занимает от 5 до 10 дней. Срок по остальным работам скажем при записи."}},
  {"@type":"Question","name":"Как можно оплатить?","acceptedAnswer":{"@type":"Answer","text":"Переводом, по QR-коду, картой или наличными."}},
@@ -131,7 +131,7 @@ nav .btn{height:44px;padding:0 20px;font-size:11.5px}
 .hero .r:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(11,11,12,.6),transparent 24%),linear-gradient(0deg,rgba(11,11,12,.65),transparent 32%)}
 .hero .cap{position:absolute;z-index:2;right:28px;bottom:26px;font:600 11px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.72)}
 /* ЭФФЕКТ ФАР: фара дважды моргает, потом по фото проходит луч. Только transform и opacity */
-.hl{position:absolute;left:76%;top:65%;width:36%;aspect-ratio:2/1;transform:translate(-50%,-50%) scale(.85);opacity:0;mix-blend-mode:screen;pointer-events:none;
+.hl{position:absolute;left:79%;top:66%;width:36%;aspect-ratio:2/1;transform:translate(-50%,-50%) scale(.85);opacity:0;mix-blend-mode:screen;pointer-events:none;
  background:radial-gradient(closest-side,rgba(255,252,245,.95),rgba(255,214,170,.5) 38%,rgba(var(--acc-rgb),.12) 62%,transparent 75%)}
 .hl:after{content:"";position:absolute;left:-60%;right:-60%;top:47%;height:6%;background:linear-gradient(90deg,transparent,rgba(255,240,225,.8) 45%,#fff 50%,rgba(255,240,225,.8) 55%,transparent)}
 .beam{position:absolute;top:-25%;bottom:-25%;left:0;width:34%;opacity:0;mix-blend-mode:screen;pointer-events:none;transform:translateX(-130%) skewX(-16deg);
@@ -152,6 +152,16 @@ nav .btn{height:44px;padding:0 20px;font-size:11.5px}
 .lr small{font:600 11px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--acc)}
 .lr h3{font:800 clamp(22px,2.2vw,32px)/1.02 var(--head);text-transform:uppercase;letter-spacing:-.02em;margin:16px 0 18px}
 .lr ul{list-style:none;display:grid;gap:8px;color:var(--tx2);font-size:15px}.lr li{display:flex;gap:10px}.lr li:before{content:"";width:6px;height:6px;margin-top:9px;flex-shrink:0;background:var(--acc)}
+/* ВТОРОЕ НАПРАВЛЕНИЕ: детейлинг */
+.dtl{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,80px);align-items:center;background:var(--bg2);border-block:1px solid var(--line)}
+.dtl p{margin:26px 0 34px;color:var(--tx2);max-width:460px}
+.dtl-g{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:10px;aspect-ratio:5/4}
+.dtl-g figure{position:relative;overflow:hidden;background:var(--bg3)}
+.dtl-g figure:first-child{grid-row:span 2}
+.dtl-g img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.dtl-g:hover img{transform:scale(1.05)}
+.dtl-g figcaption{position:absolute;left:12px;bottom:12px;padding:8px 12px;background:rgba(11,11,12,.78);font:600 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase}
+@media(max-width:900px){.dtl{grid-template-columns:1fr}.dtl-g{aspect-ratio:4/3.6}}
 .oth{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:30px}
 .oth b{font:600 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-right:8px}
 .oth span{border:1px solid var(--line);padding:10px 16px;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--tx2)}
@@ -423,7 +433,7 @@ html.lock{overflow:hidden}
 <body>
 <!-- 14. шапка -->
 <nav id="nav"><a href="#top" class="logo"><img src="img/logo.jpg" alt="" width="42" height="42">JOHNNY <span>STUDIO</span></a>
- <div class="links"><a href="#brands">Range Rover</a><a href="#services">Услуги и цены</a><a href="#works">Работы</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></div>
+ <div class="links"><a href="#brands">Range Rover</a><a href="#services">Услуги и цены</a><a href="#works">Работы</a><a href="#reviews">Отзывы</a><a href="#detailing">Детейлинг</a><a href="#contacts">Контакты</a></div>
  <a class="btn a" href="#book" data-book>Записаться</a></nav>
 
 <!-- 15. первый экран: главное Range Rover и Land Rover -->
@@ -434,7 +444,7 @@ html.lock{overflow:hidden}
   <div class="cta fx"><a class="btn" href="#calc">Рассчитать цену</a><a class="btn o" href="#book" data-book>Записаться</a></div>
   <div class="facts fx"><div><b>5,0 <i>★</i></b><small>72 оценки на Картах</small></div><div><b>10–20</b><small>работаем</small></div><div><b>Тюменский пр.</b><small>5, стр. 2, парковка</small></div></div>
  </div>
- <div class="r"><div class="stage"><img src="img/hero.jpg" alt="Чёрный Range Rover в боксе Johnny Studio" width="1280" height="960" fetchpriority="high"><span class="hl" aria-hidden="true"></span></div><span class="beam" aria-hidden="true"></span><div class="cap">Range Rover в боксе студии</div></div>
+ <div class="r"><div class="stage"><img src="img/hero.jpg?v=2" alt="Чёрный Range Rover у стены с логотипом Johnny Studio" width="1448" height="1086" fetchpriority="high"><span class="hl" aria-hidden="true"></span></div><span class="beam" aria-hidden="true"></span><div class="cap">Range Rover в боксе студии</div></div>
 </header>
 
 <main>
@@ -443,11 +453,11 @@ html.lock{overflow:hidden}
  <div class="bh"><div><div class="k" data-r>Специализация</div><h2>С чем работаем<br><em>чаще всего</em></h2></div>
   <p data-r>В боксе обычно стоит несколько Range Rover, поэтому можно <em>наглядно посмотреть, как будет выглядеть ваша машина.</em></p></div>
  <div class="lr">
-  <article data-r><small>L405 · Vogue</small><h3>Range Rover</h3><ul><li>Фары и фонари в стиле рестайлинга</li><li>Решётка, зеркала, шильдики</li><li>Мультимедиа, климат, руль с кнопками</li></ul></article>
-  <article data-r><small>L494</small><h3>Range Rover Sport</h3><ul><li>Фары в стиле рестайлинга</li><li>Динамические поворотники</li><li>Камеры, доводчики, салон</li></ul></article>
-  <article data-r><small>Любые модели</small><h3>Land Rover</h3><ul><li>Оклейка полиуретаном</li><li>Антихром и тонировка</li><li>Поправим недочёты за другими мастерами</li></ul></article>
+  <article data-r><small>L405 · Vogue</small><h3>Range Rover</h3><ul><li>Фары и фонари в стиле рестайлинга</li><li>Решётка, шильдики, зеркала</li><li>Динамические поворотники</li><li>Мультимедиа, климат, кнопки руля и стеклоподъёмников</li></ul></article>
+  <article data-r><small>L494 Sport</small><h3>Range Rover Sport</h3><ul><li>Фары в стиле рестайлинга</li><li>Динамические поворотники</li><li>Камеры, доводчики, салон</li></ul></article>
+  <article data-r><small>Премиум</small><h3>Другие премиальные модели авто</h3><ul><li>Оклейка цветным и прозрачным полиуретаном с полным разбором и без использования праймера</li><li>Тонировка</li><li>Поправим недочёты за другими мастерами</li></ul></article>
  </div>
- <div class="oth" data-r><b>И другие марки</b><span>Skoda</span><span>Volkswagen</span><span>BMW</span><span>Volvo</span><span>Chevrolet</span><span>Lexus</span><span>Porsche</span><span>Hyundai</span></div>
+ <div class="oth" data-r><b>И другие премиальные марки</b><span>Jaguar</span><span>Mini</span><span>BMW</span><span>Lexus</span><span>Porsche</span><span>Audi</span></div>
 </section>
 
 <!-- 22. калькулятор -->
@@ -467,7 +477,7 @@ html.lock{overflow:hidden}
 <!-- 17. услуги гармошкой. ≈ = ориентир, Джони пока не прислал цену -->
 <section id="services"><div class="k" data-r>Услуги</div><h2>Услуги<br><em>и цены</em></h2>
  <div class="pan">
-  <article class="p on"><img src="img/s-light.jpg" alt="" loading="lazy" style="object-position:50% 72%"><span class="n">01</span><span class="vt">Свет</span><div class="bd"><h3>Фары и фонари</h3><p>Ставим фары и фонари, часто сразу закрываем их плёнкой. Range Rover, Skoda, Volkswagen, Chevrolet и другие.</p>
+  <article class="p on"><img src="img/s-light.jpg" alt="" loading="lazy" style="object-position:50% 72%"><span class="n">01</span><span class="vt">Свет</span><div class="bd"><h3>Фары и фонари</h3><p>Ставим фары и фонари, часто сразу закрываем их плёнкой. Range Rover, Land Rover и другие премиальные марки.</p>
    <div class="row">Фары на Range Rover L494 и L405<b>6 000 ₽</b></div><div class="row">Бронь фар полиуретаном<b class="o">4 000 ₽</b></div><div class="row">Фонари в стиле рестайлинга<b class="f">по фото</b></div><div class="row">Фары на другие марки<b class="f">по фото</b></div>
    <a class="more" href="#book" data-book data-msg="Здравствуйте! Я с сайта, интересуют фары. Моя машина: ">Узнать цену для своей машины</a></div></article>
   <article class="p"><img src="img/s-wrap.jpg" alt="" loading="lazy"><span class="n">02</span><span class="vt">Плёнка</span><div class="bd"><h3>Оклейка полиуретаном</h3><p>Защищаем кузов или меняем цвет. Большая палитра плёнок, полная оклейка занимает от 5 до 10 дней.</p>
@@ -527,6 +537,17 @@ html.lock{overflow:hidden}
  <div class="rv-foot" data-r><span>Отзывы с Яндекс Карт, сокращены. Наведите, чтобы остановить.</span><a class="btn o" href="https://yandex.ru/maps/org/152411231869/reviews/" target="_blank" rel="noopener">Все отзывы на Картах</a></div>
 </section>
 
+<!-- ВТОРОЕ НАПРАВЛЕНИЕ: переход на сайт детейлинга любых марок -->
+<section class="dtl" id="detailing">
+ <div class="dtl-t"><div class="k" data-r>Второе направление</div><h2>Детейлинг<br><em>для любых машин</em></h2>
+  <p data-r>Полировка и керамика, вмятины без покраски, химчистка салона, плёнки, фары и диски. Тот же бокс и та же команда, все работы на отдельном сайте.</p>
+  <a class="btn a" href="https://denis-sites.github.io/johnny-detailing/" data-r>Сайт детейлинга <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+ <a class="dtl-g" href="https://denis-sites.github.io/johnny-detailing/" aria-label="Открыть сайт детейлинга" data-r>
+  <figure><img src="img/dt-lexus.jpg" alt="Lexus RX после полировки" loading="lazy"><figcaption>Полировка</figcaption></figure>
+  <figure><img src="img/dt-gle.jpg" alt="Mercedes GLE в матовом полиуретане" loading="lazy"><figcaption>Плёнка</figcaption></figure>
+  <figure><img src="img/dt-head.jpg" alt="Фара после реставрации" loading="lazy"><figcaption>Фары</figcaption></figure></a>
+</section>
+
 <!-- 19. этапы: таймлайн со светящейся линией -->
 <section class="how" id="how"><div class="side"><div class="k" data-r>Как проходит работа</div><h2>От сообщения<br><em>до выдачи</em></h2>
   <p data-r>Четыре шага, и цену вы знаете до того, как мы начнём. Без сюрпризов в конце.</p></div>
@@ -540,7 +561,7 @@ html.lock{overflow:hidden}
 <!-- 23. вопросы. Ответы продублированы в JSON-LD FAQPage в <head> -->
 <section class="faq" id="faq"><div><div class="k" data-r>Коротко</div><h2>Вопросы<br><em>и ответы</em></h2></div>
  <dl>
-  <div data-r><dt>Вы работаете только с Range Rover?</dt><dd>Нет, с любыми марками: Skoda, Volkswagen, BMW, Volvo, Chevrolet и другими. Land Rover знаем особенно хорошо, для них много доработок.</dd></div>
+  <div data-r><dt>Вы работаете только с Range Rover?</dt><dd>Профильно с Range Rover и Land Rover, для них много доработок. Работаем и с другими премиальными машинами: Jaguar, Mini, BMW, Lexus, Porsche, Audi. Детейлинг для любых марок на нашем втором сайте.</dd></div>
   <div data-r><dt>Сколько стоит?</dt><dd>Фары на Range Rover L494 и L405 от 6 000 ₽, зоны риска от 60 000 ₽, полная оклейка в цвет от 280 000 ₽. Точную цену называем до начала работ.</dd></div>
   <div data-r><dt>Сколько времени занимает работа?</dt><dd>Вмятины часто убираем день в день, полная оклейка занимает от 5 до 10 дней. Срок по остальным работам скажем при записи.</dd></div>
   <div data-r><dt>Как можно оплатить?</dt><dd>Переводом, по QR-коду, картой или наличными.</dd></div>
@@ -569,7 +590,7 @@ html.lock{overflow:hidden}
  </div>
 </section>
 </main>
-<footer class="ft"><span>Johnny Studio · тюнинг и детейлинг · Москва</span><a href="https://yandex.ru/maps/org/152411231869/" target="_blank" rel="noopener">Мы на Яндекс Картах</a></footer>
+<footer class="ft"><span>Johnny Studio · тюнинг и детейлинг · Москва</span><span><a href="https://denis-sites.github.io/johnny-detailing/">Детейлинг любых машин</a> · <a href="https://yandex.ru/maps/org/152411231869/" target="_blank" rel="noopener">Мы на Яндекс Картах</a></span></footer>
 
 <!-- 24. нижняя панель на телефоне -->
 <div class="mbar" id="mbar"><a class="btn a" href="#book" data-book>Записаться</a><a class="btn o" href="#calc">Цена</a><a class="btn o" href="tel:+79623634212" aria-label="Позвонить"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></a></div>
@@ -677,12 +698,8 @@ const REV=[
  ['Роман М.','Тонировка, BMW E39','Боковые передние в атермалку и заднюю полусферу в пятёрку. Полусферу кстати Люмаром настоящим оклеили, что очень приятно!'],
  ['Руслан А.','Салон Range Rover','Приезжаю второй раз и однозначно приеду ещё. В первый раз делали рестайлинг салона, климат, мультимедиа, работа сделана на высшем уровне.'],
  ['Василий С.','Range Rover Sport','Делал фары и переднюю решётку на Range Rover Sport, плюс зеркала и прочие мелочи. Тачка преобразилась. Вышло сочно!'],
- ['Ангира Г.','Skoda Octavia','Устанавливал фары на Шкода Октавия. Попутно ещё поменял шильдики на чёрные, забронировал фары в плёнку и сделал антихром решётки.'],
  ['Елизавета С.','Вмятины без покраски','Всё на высшем уровне! Три вмятины убрали, всё очень быстро, день в день за пару часов, нет следов, мы очень довольны!'],
- ['Ara P.','Фары, Golf 6','Приехал на установку фар на Гольф 6. В течение часа всё установили и подключили. Также предложили оклеить фары в плёнку.'],
  ['Андрей Ч.','Johnny Studio','Отличное место, Евгению можно доверить что угодно и не задумываться, халтуры точно не будет!'],
- ['Никита Л.','Химчистка, Santa Fe','Делал химчистку на Санта-Фе 2014 года, сделали в идеал, как будто с салона новую машину забрал. Всё быстро и качественно!'],
- ['Дмитрий М.','Фары, Chevrolet Cruze','Всё сделали чётко, быстро и недорого! Так понравился результат, что решил сразу и плёночкой покрыть!'],
  ['SVZ','Камеры','Обращался за установкой камер переднего и заднего вида с выводом на экран. Сделали отлично! Очень грамотный и приятный в общении персонал.'],
  ['Василий К.','Полировка','Мастер своего дела на 100%: чётко, красиво, самое главное дотошно до каждой мелочи! Лучшая полировка, какую я видел!'],
  ['Ал К.','Range Rover','Быстро, качественно и аккуратно! Всё установили и также предложили динамические поворотники! Кто на Ренджах, всем сюда!'],
