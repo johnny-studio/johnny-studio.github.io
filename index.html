@@ -17,7 +17,7 @@
 <link rel="preload" href="fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <!-- SEO: карточка студии и вопросы для поиска. Цены тут только точные, с Яндекс Карт -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"AutoRepair","name":"Johnny Studio","alternateName":"Джони студио","url":"https://johnny-studio.github.io/","image":"https://johnny-studio.github.io/img/hero.jpg?v=2","logo":"https://johnny-studio.github.io/img/logo.jpg","telephone":"+7 962 363-42-12","priceRange":"2 100–315 000 ₽",
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Johnny Studio","alternateName":"Джони студио","url":"https://johnny-studio.github.io/","image":"https://johnny-studio.github.io/img/hero.jpg?v=2","logo":"https://johnny-studio.github.io/img/logo.jpg","telephone":"+7 962 363-42-12","priceRange":"1 500–320 000 ₽",
 "address":{"@type":"PostalAddress","streetAddress":"Тюменский проезд, 5, стр. 2","addressLocality":"Москва","addressCountry":"RU"},
 "geo":{"@type":"GeoCoordinates","latitude":55.80955,"longitude":37.740983},
 "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"20:00"},
@@ -28,16 +28,18 @@
  {"@type":"Offer","name":"Внешний вид в стиле рестайлинга: фары и фонари, решётка и шильдики в подарок","price":"125000","priceCurrency":"RUB"},
  {"@type":"Offer","name":"Салон: мультимедиа, климат-контроль, кнопки руля и стеклоподъёмника","price":"135000","priceCurrency":"RUB"},
  {"@type":"Offer","name":"Комплекс: внешний и внутренний вид в стиле рестайлинга","price":"315000","priceCurrency":"RUB"},
- {"@type":"Offer","name":"Оклейка зон риска полиуретаном","price":"60000","priceCurrency":"RUB"},
- {"@type":"Offer","name":"Полная оклейка в цветной полиуретан","price":"280000","priceCurrency":"RUB"},
+ {"@type":"Offer","name":"Оклейка зон риска полиуретаном","price":"80000","priceCurrency":"RUB"},
+ {"@type":"Offer","name":"Полная оклейка в прозрачный полиуретан","price":"280000","priceCurrency":"RUB"},
+ {"@type":"Offer","name":"Полная оклейка в цветной полиуретан","price":"320000","priceCurrency":"RUB"},
+ {"@type":"Offer","name":"Камеры кругового обзора 360 на Range Rover","price":"40000","priceCurrency":"RUB"},
  {"@type":"Offer","name":"Шумоизоляция четырёх дверей","price":"40000","priceCurrency":"RUB"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
- {"@type":"Question","name":"Вы работаете только с Range Rover?","acceptedAnswer":{"@type":"Answer","text":"Профильно с Range Rover и Land Rover, для них много доработок. Работаем и с другими премиальными машинами: Jaguar, Mini, BMW, Lexus, Porsche, Audi. Детейлинг для любых марок на нашем втором сайте."}},
- {"@type":"Question","name":"Сколько стоит?","acceptedAnswer":{"@type":"Answer","text":"Внешний вид в стиле рестайлинга 125 000 ₽, салон 135 000 ₽, комплекс 315 000 ₽. Отдельно: фары в стиле рестайлинга 98 000 ₽, мультимедиа 80 000 ₽, зоны риска от 60 000 ₽. Точную цену называем до начала работ."}},
- {"@type":"Question","name":"Сколько времени занимает работа?","acceptedAnswer":{"@type":"Answer","text":"Вмятины часто убираем день в день, полная оклейка занимает от 5 до 10 дней. Срок по остальным работам скажем при записи."}},
- {"@type":"Question","name":"Как можно оплатить?","acceptedAnswer":{"@type":"Answer","text":"Переводом, по QR-коду, картой или наличными."}},
+ {"@type":"Question","name":"Вы работаете только с Range Rover?","acceptedAnswer":{"@type":"Answer","text":"Профильно с Range Rover, для них все доработки на этом сайте. Работаем и с другими премиальными машинами: Jaguar, Mini, BMW, Lexus, Porsche, Audi. Детейлинг для любых марок на нашем втором сайте."}},
+ {"@type":"Question","name":"Сколько стоит?","acceptedAnswer":{"@type":"Answer","text":"Готовые варианты: внешний вид 125 000 ₽, салон 135 000 ₽, комплекс 315 000 ₽. Отдельно: установка фар 6 000 ₽, полный антихром от 35 000 ₽, мультимедиа 80 000 ₽, зоны риска 80 000 ₽. Точную цену называем до начала работ."}},
+ {"@type":"Question","name":"Сколько времени занимает работа?","acceptedAnswer":{"@type":"Answer","text":"Часто выполняем работы день в день. Полная оклейка занимает от 5 до 10 дней. Срок по остальным работам скажем при записи."}},
+ {"@type":"Question","name":"Как можно оплатить?","acceptedAnswer":{"@type":"Answer","text":"Переводом, по QR-коду или наличными. Работаем с юрлицами, оплата по счёту."}},
  {"@type":"Question","name":"Где вы находитесь?","acceptedAnswer":{"@type":"Answer","text":"Москва, Тюменский проезд, 5, стр. 2. Ежедневно с 10:00 до 20:00, есть парковка."}}]}
 </script>
 <style>
@@ -226,7 +228,7 @@ nav .btn{height:44px;padding:0 20px;font-size:11.5px}
 
 /* 18. РАБОТЫ: сетка 3:4 со сдвигом + ДО/ПОСЛЕ ползунком по фарам */
 .wtop{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,80px);align-items:center;margin-top:56px}
-.ba{position:relative;aspect-ratio:721/1000;max-height:760px;overflow:hidden;background:#000;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:ew-resize;--p:50%}
+.ba{position:relative;aspect-ratio:4/3;max-height:760px;overflow:hidden;background:#000;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:ew-resize;--p:50%}
 .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
 .ba .off{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
 .ba .hd{position:absolute;z-index:3;top:0;bottom:0;left:var(--p);width:2px;margin-left:-1px;background:var(--tx)}
@@ -235,6 +237,7 @@ nav .btn{height:44px;padding:0 20px;font-size:11.5px}
 .ba .t{position:absolute;z-index:2;top:18px;font:700 11px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;background:rgba(11,11,12,.78);padding:10px 12px;border:1px solid rgba(255,255,255,.14)}
 .ba .t.l{left:18px}.ba .t.r{right:18px;color:var(--acc)}
 .ba:focus-visible{outline:2px solid var(--acc);outline-offset:4px}
+.baw{display:inline-flex;border:1px solid rgba(255,255,255,.16)}.baw button{background:none;border:0;padding:12px 20px;font:700 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--tx2);cursor:pointer;transition:background .3s,color .3s}.baw button.on{background:var(--acc);color:var(--accInk)}
 .wtxt p{color:var(--tx2);font-size:17px;max-width:460px}.wtxt p+p{margin-top:14px}
 .wtxt .hint{display:flex;align-items:center;gap:10px;margin-top:26px;font:600 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
 .wg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);margin-top:80px}
@@ -483,21 +486,24 @@ html.lock{overflow:hidden}
 <!-- 17. услуги гармошкой. ≈ = ориентир, Джони пока не прислал цену -->
 <section id="services"><div class="k" data-r>Услуги</div><h2>Услуги<br><em>и цены</em></h2>
  <div class="pan">
-  <article class="p on"><img src="img/s-light.jpg" alt="" loading="lazy" style="object-position:50% 72%"><span class="n">01</span><span class="vt">Свет</span><div class="bd"><h3>Фары и фонари</h3><p>Ставим фары и фонари, часто сразу закрываем их плёнкой. Range Rover, Land Rover и другие премиальные марки.</p>
-   <div class="row">Фары в стиле рестайлинга<b>98 000 ₽</b></div><div class="row">Бронь фар полиуретаном<b class="o">4 000 ₽</b></div><div class="row">Фонари в стиле рестайлинга<b>27 000 ₽</b></div><div class="row">Фары на другие марки<b class="f">по фото</b></div>
+  <article class="p on"><img src="img/s-light.jpg" alt="" loading="lazy" style="object-position:50% 72%"><span class="n">01</span><span class="vt">Свет</span><div class="bd"><h3>Фары и фонари</h3><p>Ставим фары и фонари на Range Rover, часто сразу закрываем их плёнкой.</p>
+   <div class="row">Установка фар на Range Rover L405 и L494<b>6 000 ₽</b></div><div class="row">Бронь фар полиуретаном<b>6 000 ₽</b></div><div class="row">Установка фонарей<b>1 500 ₽</b></div><div class="row">Бронь фонарей полиуретаном<b>6 000 ₽</b></div>
    <a class="more" href="#book" data-book data-msg="Здравствуйте! Я с сайта, интересуют фары. Моя машина: ">Узнать цену для своей машины</a></div></article>
   <article class="p"><img src="img/s-wrap.jpg" alt="" loading="lazy"><span class="n">02</span><span class="vt">Плёнка</span><div class="bd"><h3>Оклейка полиуретаном</h3><p>Защищаем кузов или меняем цвет. Большая палитра плёнок, полная оклейка занимает от 5 до 10 дней.</p>
-   <div class="row">Зоны риска<b>60 000 ₽</b></div><div class="row">Полная оклейка в цветной полиуретан<b>280 000 ₽</b></div><div class="row">Прозрачный полиуретан на весь кузов<b class="f">после осмотра</b></div>
+   <div class="row">Зоны риска<b>80 000 ₽</b></div><div class="row">Полная оклейка в прозрачный полиуретан<b>280 000 ₽</b></div><div class="row">Полная оклейка в цветной полиуретан<b>от 320 000 ₽</b></div>
    <a class="more" href="#book" data-book data-msg="Здравствуйте! Я с сайта, интересует оклейка. Моя машина: ">Подобрать плёнку</a></div></article>
-  <article class="p"><img src="img/s-restyle.jpg" alt="" loading="lazy"><span class="n">03</span><span class="vt">Рестайлинг</span><div class="bd"><h3>Рестайлинг и антихром</h3><p>Решётка, зеркала, шильдики, динамические поворотники. Собираем машину в стиле новых Range Rover.</p>
-   <div class="row">Антихром: решётка, молдинги, шильдики<b class="o">15 000 ₽</b></div><div class="row">Решётка<b>13 000 ₽</b></div><div class="row">Динамические поворотники в зеркала<b>5 000 ₽</b></div><div class="row">Шильдики Range Rover<b>2 100 ₽</b></div><div class="row">Камеры 360<b>40 000 ₽</b></div><div class="row">Доводчики<b class="f">после осмотра</b></div>
-   <a class="more" href="#book" data-book data-msg="Здравствуйте! Я с сайта, интересует рестайлинг. Моя машина: ">Что подойдёт моей машине</a></div></article>
-  <article class="p"><img src="img/s-salon.jpg" alt="" loading="lazy"><span class="n">04</span><span class="vt">Салон</span><div class="bd"><h3>Салон и мультимедиа</h3><p>Мультимедиа, климат, руль с кнопками и шумоизоляция. Попутно поправим недочёты за другими мастерами.</p>
-   <div class="row">Шумоизоляция четырёх дверей<b>40 000 ₽</b></div><div class="row">Химчистка салона<b class="o">12 000 ₽</b></div><div class="row">Мультимедиа<b>80 000 ₽</b></div><div class="row">Климат-контроль<b>25 000 ₽</b></div>
+  <article class="p"><img src="img/s-restyle.jpg" alt="" loading="lazy"><span class="n">03</span><span class="vt">Антихром</span><div class="bd"><h3>Полный антихром</h3><p>Решётка, шильдики, динамические поворотники, молдинги, жабры и ручки дверей. От частичного до полного BLACK PACK для вашего Range Rover.</p>
+   <div class="row">Решётка, молдинги, шильдики<b>35 000 ₽</b></div><div class="row">Решётка, жабры, молдинги, шильдики, притемнённые динамические поворотники<b>49 000 ₽</b></div><div class="row">Полный BLACK PACK: решётка, накладки на зеркала, жабры, все молдинги, шильдики, притемнённые динамические поворотники, ручки дверей<b>56 700 ₽</b></div>
+   <a class="more" href="#book" data-book data-msg="Здравствуйте! Я с сайта, интересует антихром. Моя машина: ">Что подойдёт моей машине</a></div></article>
+  <article class="p"><img src="img/s-salon.jpg" alt="" loading="lazy"><span class="n">04</span><span class="vt">Салон</span><div class="bd"><h3>Салон и мультимедиа</h3><p>Мультимедиа, климат, кнопки руля и кнопки стеклоподъёмников и прочее дооснащение.</p>
+   <div class="row">Мультимедиа в стиле 17/18/22 годов<b>80 000 ₽</b></div><div class="row">Климат HD<b>25 000 ₽</b></div><div class="row">Кнопки руля и стеклоподъёмников<b>33 000 ₽</b></div>
    <a class="more" href="#book" data-book data-msg="Здравствуйте! Я с сайта, интересует салон и мультимедиа. Моя машина: ">Спросить про свою машину</a></div></article>
-  <article class="p"><img src="img/s-care.jpg" alt="" loading="lazy"><span class="n">05</span><span class="vt">Уход</span><div class="bd"><h3>Полировка, тонировка, вмятины</h3><p>Полировка с керамикой, тонировка плёнкой LLumar и вмятины без покраски, часто день в день.</p>
-   <div class="row">Полировка и керамика<b class="o">30 000 ₽</b></div><div class="row">Задняя полусфера, LLumar<b class="o">6 000 ₽</b></div><div class="row">Вмятины без покраски<b class="f">по фото</b></div>
+  <article class="p"><img src="img/s-care.jpg" alt="" loading="lazy"><span class="n">05</span><span class="vt">Уход</span><div class="bd"><h3>Полировка, тонировка, вмятины</h3><p>Полировка с керамикой, тонировка плёнкой LLumar и вмятины без покраски. Часто выполнение работ день в день.</p>
+   <div class="row">Полировка и керамика<b class="o">40 000 ₽</b></div><div class="row">Тонировка задней полусферы<b class="o">18 000 ₽</b></div><div class="row">Удаление вмятин без покраски<b class="f">по фото</b></div>
    <a class="more" href="#book" data-book data-msg="Здравствуйте! Я с сайта. Пришлю фото машины, подскажите цену. Моя машина: " data-sub="Пришлите фото в чат, назовём цену.">Прислать фото</a></div></article>
+  <article class="p"><img src="img/s-camera.jpg" alt="" loading="lazy" style="object-position:50% 60%"><span class="n">06</span><span class="vt">Камеры</span><div class="bd"><h3>Камеры 360 и омыватели</h3><p>Камеры кругового обзора и омыватель камеры заднего вида на заводских материалах.</p>
+   <div class="row">Камеры кругового обзора 360<b>40 000 ₽</b></div><div class="row">Омыватель камеры заднего вида<b class="f">по запросу</b></div>
+   <a class="more" href="#book" data-book data-msg="Здравствуйте! Я с сайта, интересуют камеры 360 или омыватель камеры. Моя машина: ">Спросить про камеры</a></div></article>
  </div>
  <p class="legend" data-r>Цены «от». <b>≈</b> ориентир, точную сумму назовём до начала работ.</p>
 </section>
@@ -505,13 +511,14 @@ html.lock{overflow:hidden}
 <!-- 18. работы: до/после по фарам + сетка -->
 <section id="works" style="padding-top:0"><div class="k" data-r>Работы</div><h2>Машины<br><em>из нашего бокса</em></h2>
  <div class="wtop">
-  <div class="ba" id="ba" tabindex="0" role="slider" aria-label="Фары Skoda Octavia: выключены и включены" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" data-r>
-   <img src="img/ba-on.jpg" alt="Skoda Octavia, фары включены" loading="lazy"><img class="off" src="img/ba-off.jpg" alt="Skoda Octavia, фары выключены" loading="lazy">
-   <span class="t l">Выключены</span><span class="t r">Включены</span>
+  <div class="ba" id="ba" tabindex="0" role="slider" aria-label="Фары Range Rover: до и после" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" data-r>
+   <img id="baA" src="img/ba-head-after.jpg" alt="Range Rover, фары в стиле рестайлинга, после" loading="lazy"><img id="baB" class="off" src="img/ba-head-before.jpg" alt="Range Rover, штатные фары, до" loading="lazy">
+   <span class="t l">До</span><span class="t r">После</span>
    <span class="hd"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6 3 12l6 6M15 6l6 6-6 6"/></svg></i></span></div>
-  <div class="wtxt" data-r><h3 style="font:800 clamp(22px,2.2vw,32px)/1.05 var(--head);text-transform:uppercase">Фары в стиле рестайлинга</h3>
-   <p style="margin-top:16px">Skoda Octavia: та же машина и тот же бокс. Потяните ползунок, чтобы включить свет.</p>
-   <p>Фары часто сразу закрываем полиуретаном, чтобы не мутнели.</p>
+  <div class="wtxt" data-r><div class="baw" role="group" aria-label="Что сравнить"><button type="button" class="on" data-ba="head" aria-pressed="true">Фары</button><button type="button" data-ba="tail" aria-pressed="false">Фонари</button></div>
+   <h3 id="baT" style="font:800 clamp(22px,2.2vw,32px)/1.05 var(--head);text-transform:uppercase;margin-top:22px">Фары в стиле рестайлинга</h3>
+   <p id="baP1" style="margin-top:16px">Range Rover: штатные фары и фары в стиле рестайлинга. Потяните ползунок.</p>
+   <p id="baP2">Фары часто сразу закрываем полиуретаном, чтобы не царапались и сохраняли внешний вид новой оптики.</p>
    <span class="hint">← Тяните →</span></div>
  </div>
  <div class="wg">
@@ -521,14 +528,17 @@ html.lock{overflow:hidden}
   <div class="c" data-t="Range Rover" data-p="Мультимедиа и климат"><div class="ph" data-img><img src="img/w4.jpg" alt="Салон Range Rover, мультимедиа" loading="lazy"></div><h3>Range Rover</h3><p>Мультимедиа и климат</p></div>
   <div class="c" data-t="Range Rover" data-p="Из нашего бокса"><div class="ph" data-img><img src="img/w5.jpg" alt="Серый Range Rover в боксе" loading="lazy"></div><h3>Range Rover</h3><p>Из нашего бокса</p></div>
   <div class="c" data-t="Range Rover" data-p="Фонари в стиле рестайлинга"><div class="ph" data-img><img src="img/w6.jpg" alt="Range Rover, фонари" loading="lazy"></div><h3>Range Rover</h3><p>Фонари в стиле рестайлинга</p></div>
+  <div class="c" data-t="Range Rover" data-p="Суппорты Range Rover"><div class="ph" data-img><img src="img/w-cal-car.jpg" alt="Суппорт Range Rover на машине" loading="lazy"></div><h3>Range Rover</h3><p>Суппорты Range Rover</p></div>
+  <div class="c" data-t="Range Rover" data-p="Суппорты Range Rover"><div class="ph" data-img><img src="img/w-cal-1.jpg" alt="Суппорт с надписью Range Rover" loading="lazy"></div><h3>Range Rover</h3><p>Суппорты Range Rover</p></div>
+  <div class="c" data-t="Range Rover" data-p="Суппорты Range Rover"><div class="ph" data-img><img src="img/w-cal-2.jpg" alt="Пара суппортов Range Rover" loading="lazy"></div><h3>Range Rover</h3><p>Суппорты Range Rover</p></div>
  </div>
 </section>
 
 <!-- МАСТЕР: имя один раз, дальше «мы» -->
 <section class="master" id="master">
  <figure><div data-img><img src="img/master.jpg" alt="Салон Range Rover в работе" loading="lazy"></div><figcaption>Салон Range Rover в работе</figcaption></figure>
- <div><div class="k" data-r>Мастер</div><h2>Евгений<br><em>и команда</em></h2>
-  <p class="big" data-r>Нам доверяют машины целиком: от фар и салона до полной оклейки. <em>Подскажем, что действительно нужно, и назовём цену до начала работ.</em></p>
+ <div><div class="k" data-r>Команда</div><h2>Команда<br><em>профессионалов</em></h2>
+  <p class="big" data-r>Нам доверяют машины целиком: от экстерьера и интерьера до полной оклейки с детализацией. <em>Подскажем, что действительно нужно, и назовём цену до начала работ.</em></p>
   <ul class="why" data-r>
    <li><b>Дотошно</b><span>«Чётко, красиво, самое главное дотошно до каждой мелочи», пишут клиенты.</span></li>
    <li><b>Без навязывания</b><span>Советуем по делу и честно говорим, что не нужно.</span></li>
@@ -567,10 +577,10 @@ html.lock{overflow:hidden}
 <!-- 23. вопросы. Ответы продублированы в JSON-LD FAQPage в <head> -->
 <section class="faq" id="faq"><div><div class="k" data-r>Коротко</div><h2>Вопросы<br><em>и ответы</em></h2></div>
  <dl>
-  <div data-r><dt>Вы работаете только с Range Rover?</dt><dd>Профильно с Range Rover и Land Rover, для них много доработок. Работаем и с другими премиальными машинами: Jaguar, Mini, BMW, Lexus, Porsche, Audi. Детейлинг для любых марок на нашем втором сайте.</dd></div>
-  <div data-r><dt>Сколько стоит?</dt><dd>Внешний вид в стиле рестайлинга 125 000 ₽, салон 135 000 ₽, комплекс 315 000 ₽. Отдельно: фары в стиле рестайлинга 98 000 ₽, мультимедиа 80 000 ₽, зоны риска от 60 000 ₽. Точную цену называем до начала работ.</dd></div>
-  <div data-r><dt>Сколько времени занимает работа?</dt><dd>Вмятины часто убираем день в день, полная оклейка занимает от 5 до 10 дней. Срок по остальным работам скажем при записи.</dd></div>
-  <div data-r><dt>Как можно оплатить?</dt><dd>Переводом, по QR-коду, картой или наличными.</dd></div>
+  <div data-r><dt>Вы работаете только с Range Rover?</dt><dd>Профильно с Range Rover, для них все доработки на этом сайте. Работаем и с другими премиальными машинами: Jaguar, Mini, BMW, Lexus, Porsche, Audi. Детейлинг для любых марок на нашем втором сайте.</dd></div>
+  <div data-r><dt>Сколько стоит?</dt><dd>Готовые варианты: внешний вид 125 000 ₽, салон 135 000 ₽, комплекс 315 000 ₽. Отдельно: установка фар 6 000 ₽, полный антихром от 35 000 ₽, мультимедиа 80 000 ₽, зоны риска 80 000 ₽. Точную цену называем до начала работ.</dd></div>
+  <div data-r><dt>Сколько времени занимает работа?</dt><dd>Часто выполняем работы день в день. Полная оклейка занимает от 5 до 10 дней. Срок по остальным работам скажем при записи.</dd></div>
+  <div data-r><dt>Как можно оплатить?</dt><dd>Переводом, по QR-коду или наличными. Работаем с юрлицами, оплата по счёту.</dd></div>
   <div data-r><dt>Где вы находитесь?</dt><dd>Москва, Тюменский проезд, 5, стр. 2. Ежедневно с 10:00 до 20:00, есть парковка.</dd></div>
  </dl></section>
 
@@ -644,6 +654,11 @@ ba.addEventListener('pointermove',e=>{if(drag)fromX(e.clientX)});
 ba.addEventListener('pointerup',()=>drag=false);ba.addEventListener('pointercancel',()=>drag=false);
 ba.addEventListener('keydown',e=>{const v=+ba.getAttribute('aria-valuenow');if(e.key==='ArrowLeft'){setP(v-5);e.preventDefault()}if(e.key==='ArrowRight'){setP(v+5);e.preventDefault()}});
 
+// 18. переключатель ползунка: фары / фонари
+const BA={head:['img/ba-head-before.jpg','img/ba-head-after.jpg','Фары в стиле рестайлинга','Range Rover: штатные фары и фары в стиле рестайлинга. Потяните ползунок.','Фары часто сразу закрываем полиуретаном, чтобы не царапались и сохраняли внешний вид новой оптики.','Фары Range Rover','фары'],
+ tail:['img/ba-tail-before.jpg','img/ba-tail-after.jpg','Фонари в стиле рестайлинга','Range Rover Sport L494: штатные фонари и фонари в стиле рестайлинга. Потяните ползунок.','Фонари тоже можно забронировать полиуретаном.','Фонари Range Rover Sport','фонари']};
+document.querySelectorAll('.baw button').forEach(b=>b.onclick=()=>{const d=BA[b.dataset.ba];document.querySelectorAll('.baw button').forEach(x=>{x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});
+ $('#baB').src=d[0];$('#baB').alt=d[5]+', до';$('#baA').src=d[1];$('#baA').alt=d[5]+', после';$('#baT').textContent=d[2];$('#baP1').textContent=d[3];$('#baP2').textContent=d[4];ba.setAttribute('aria-label',d[5]+': до и после');setP(50)});
 // 18. фото работ крупно
 const lb=$('#lb');
 $$('.c').forEach(c=>c.addEventListener('click',()=>{$('#lbi').src=c.querySelector('img').src;$('#lbi').alt=c.querySelector('img').alt;$('#lbt').textContent=c.dataset.t;$('#lbp').textContent=c.dataset.p;lb.classList.add('on')}));
