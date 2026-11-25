@@ -5,7 +5,7 @@
 <meta name="color-scheme" content="dark">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Johnny Studio: связаться</title>
-<meta name="description" content="Johnny Studio, детейлинг и тюнинг в Москве. Telegram, звонок, сайт и маршрут.">
+<meta name="description" content="Johnny Studio, детейлинг и тюнинг в Москве. Telegram, WhatsApp, Max, звонок, сайт и маршрут.">
 <meta name="theme-color" content="#0a0908">
 <link rel="icon" href="../img/logo.jpg">
 <link rel="preload" href="../fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
@@ -60,11 +60,12 @@ h1 b{color:var(--acc)}
     <a class="it main" data-tg href="#" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 3.6 2.9 10.8c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.5-1.5zM8.7 13.6l9.4-5.9c.5-.3.9-.1.5.2l-8 7.2-.3 3.3z"/></svg></span>
       <span><b>Написать в Telegram</b><small>Ответим и подскажем цену</small></span><span class="ar">›</span></a>
-    <!-- WhatsApp скрыт, пока Джони не подтвердит, что он есть на номере. Вернуть: убрать комментарий
     <a class="it" data-wa href="#" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="#25d366"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1a17 17 0 0 1-1.8-.7 13.6 13.6 0 0 1-5.2-4.6c-.4-.6-1-1.6-1-3s.8-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.3.5-.4.5c-.2.2-.3.3-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.1 1.5z"/></svg></span>
       <span><b>WhatsApp</b><small>+7 (962) 363-42-12</small></span><span class="ar">›</span></a>
-    -->
+    <a class="it" data-max href="https://max.ru/" target="_blank" rel="noopener">
+      <span class="ic" style="color:#8b5cf6"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.9 2 11.7c0 2.4 1.1 4.6 3 6.2L4.3 21l3.6-1.8c1.3.4 2.6.6 4.1.6 5.5 0 10-3.9 10-8.7S17.5 3 12 3zm-4.6 11.6V8.8h1.4l2 2.9 2-2.9h1.4v5.8h-1.5v-3.5l-1.9 2.6-1.9-2.6v3.5H7.4z"/></svg></span>
+      <span><b>Max</b><small id="mxs">+7 (962) 363-42-12</small></span><span class="ar">›</span></a>
     <a class="it" href="tel:+79623634212">
       <span class="ic"><svg viewBox="0 0 24 24" fill="#ff7a1f"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span>
       <span><b>Позвонить</b><small>Ежедневно 10:00–20:00</small></span><span class="ar">›</span></a>
@@ -82,9 +83,11 @@ h1 b{color:var(--acc)}
 </main>
 <script>
 /* Сообщения начинаются с «по QR-коду», чтобы студия видела, откуда клиент */
-const TG='johnnypolishmycar', WA='79623634212', T='Здравствуйте! Я по QR-коду с машины. Хочу узнать про: ';
+const TG='Evgenol', WA='79623634212', MAX='', /* MAX: ссылка на профиль Джони в Max (max.ru/u/...) */ T='Здравствуйте! Я по QR-коду с машины. Хочу узнать про: ';
 document.querySelectorAll('[data-tg]').forEach(a=>a.href='https://t.me/'+TG+'?text='+encodeURIComponent(T));
 document.querySelectorAll('[data-wa]').forEach(a=>a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(T));
+/* Max: по номеру чат не открыть. Есть ссылка на профиль — ведём туда, нет — открываем Max и копируем текст */
+document.querySelectorAll('[data-max]').forEach(a=>{if(MAX){a.href=MAX;document.getElementById('mxs').textContent='Написать в Max'}else a.addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(T)})});
 </script>
 <!-- Яндекс Метрика. Вставить номер счётчика в YM_ID, пока пусто, ничего не грузится.
      Цели в Метрике (тип «JavaScript-событие»): tg, wa, call, route, reviews -->
@@ -93,7 +96,7 @@ document.querySelectorAll('[data-wa]').forEach(a=>a.href='https://wa.me/'+WA+'?t
 if(!YM_ID)return;
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
 ym(YM_ID,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-const goal=h=>/t\.me\//.test(h)?'tg':/wa\.me\//.test(h)?'wa':/^tel:/.test(h)?'call':/rtext=/.test(h)?'route':/yandex\.ru\/maps/.test(h)?'reviews':'';
+const goal=h=>/t\.me\//.test(h)?'tg':/wa\.me\//.test(h)?'wa':/max\.ru/.test(h)?'max':/^tel:/.test(h)?'call':/rtext=/.test(h)?'route':/yandex\.ru\/maps/.test(h)?'reviews':'';
 document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const g=goal(a.getAttribute('href')||a.href);if(g)ym(YM_ID,'reachGoal',g,{page:PAGE})},true);
 })();
 </script>

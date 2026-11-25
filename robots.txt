@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /v1/
+Sitemap: https://johnny-studio.github.io/sitemap.xml
