@@ -86,7 +86,7 @@ h1 b{color:var(--acc)}
 </main>
 <script>
 /* Сообщения начинаются с «по QR-коду», чтобы студия видела, откуда клиент */
-const TG='Evgenol', WA='79623634212', MAX='', /* MAX: ссылка на профиль Джони в Max (max.ru/u/...) */ T='Здравствуйте! Я по QR-коду с машины. Хочу узнать про: ';
+const TG='Evgenol', WA='79623634212', MAX='https://max.ru/u/f9LHodD0cOKrQpApNBukv7pSVN5a0-31kk4UaXkB9NqQM-C5HjFZ_zI0HKw', /* MAX: ссылка на профиль Джони в Max (max.ru/u/...) */ T='Здравствуйте! Я по QR-коду с машины. Хочу узнать про: ';
 document.querySelectorAll('[data-tg]').forEach(a=>a.href='https://t.me/'+TG+'?text='+encodeURIComponent(T));
 document.querySelectorAll('[data-wa]').forEach(a=>a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(T));
 /* Max: по номеру чат не открыть. Есть ссылка на профиль — ведём туда, нет — открываем Max и копируем текст */
@@ -95,7 +95,7 @@ document.querySelectorAll('[data-max]').forEach(a=>{if(MAX){a.href=MAX;document.
 <!-- Яндекс Метрика. Вставить номер счётчика в YM_ID, пока пусто, ничего не грузится.
      Цели в Метрике (тип «JavaScript-событие»): tg, wa, call, route, reviews -->
 <script>
-(()=>{const YM_ID='', PAGE='qr';
+(()=>{const YM_ID=114684418, PAGE='qr';
 if(!YM_ID)return;
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
 ym(YM_ID,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
@@ -103,5 +103,6 @@ const goal=h=>/t\.me\//.test(h)?'tg':/wa\.me\//.test(h)?'wa':/max\.ru/.test(h)?'
 document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const g=goal(a.getAttribute('href')||a.href);if(g)ym(YM_ID,'reachGoal',g,{page:PAGE})},true);
 })();
 </script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114684418" style="position:absolute;left:-9999px" alt=""></div></noscript>
 </body>
 </html>

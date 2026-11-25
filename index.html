@@ -22,7 +22,7 @@
 "geo":{"@type":"GeoCoordinates","latitude":55.80955,"longitude":37.740983},
 "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"20:00"},
 "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","ratingCount":"72","reviewCount":"68","bestRating":"5"},
-"sameAs":["https://t.me/Evgenol","https://wa.me/79623634212","https://t.me/johnnypolishmycar","https://yandex.ru/maps/org/152411231869/"],
+"sameAs":["https://t.me/Evgenol","https://wa.me/79623634212","https://max.ru/u/f9LHodD0cOKrQpApNBukv7pSVN5a0-31kk4UaXkB9NqQM-C5HjFZ_zI0HKw","https://t.me/johnnypolishmycar","https://yandex.ru/maps/org/152411231869/"],
 "makesOffer":[
  {"@type":"Offer","name":"Фары в стиле рестайлинга на Range Rover","price":"98000","priceCurrency":"RUB"},
  {"@type":"Offer","name":"Внешний вид в стиле рестайлинга: фары и фонари, решётка и шильдики в подарок","price":"125000","priceCurrency":"RUB"},
@@ -693,7 +693,7 @@ $$('#pre button').forEach(b=>b.onclick=()=>pickPre(+b.dataset.p));
 pickPre(0);
 
 // 6. ОКНО ЗАПИСИ. Пусто = кнопка скрыта. WhatsApp выключен, пока Джони не подтвердит, что он есть на номере
-const BOOK={tg:'Evgenol',wa:'79623634212',max:'',phone:'+79623634212',phoneText:'+7 (962) 363-42-12',hours:'Ежедневно 10:00–20:00'};
+const BOOK={tg:'Evgenol',wa:'79623634212',max:'https://max.ru/u/f9LHodD0cOKrQpApNBukv7pSVN5a0-31kk4UaXkB9NqQM-C5HjFZ_zI0HKw',phone:'+79623634212',phoneText:'+7 (962) 363-42-12',hours:'Ежедневно 10:00–20:00'};
 const DEF='Здравствуйте! Я с сайта, хочу записаться. Моя машина: ';
 const bk=$('#bk'),bkN=$('#bkN'),bkS=$('#bkS');let bkFrom=null,bkMsg=DEF;
 function openBk(msg,from,sub){bkMsg=msg||DEF;bkFrom=from;bkN.textContent='';
@@ -758,7 +758,7 @@ buildMq();addEventListener('resize',buildMq);
 <!-- Яндекс Метрика. Вставить номер счётчика в YM_ID, пока пусто, ничего не грузится.
      Цели в Метрике (тип «JavaScript-событие»): tg, wa, max, call, route, reviews, book_open, calc_use -->
 <script>
-(()=>{const YM_ID='', PAGE='site';
+(()=>{const YM_ID=114684418, PAGE='site';
 if(!YM_ID)return;
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
 ym(YM_ID,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
@@ -768,5 +768,6 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)
 document.addEventListener('click',e=>{if(e.target.closest('[data-book]'))ym(YM_ID,'reachGoal','book_open',{page:PAGE});if(e.target.closest('#pre button,.chip,#tabs button'))ym(YM_ID,'reachGoal','calc_use',{page:PAGE})},true);
 })();
 </script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114684418" style="position:absolute;left:-9999px" alt=""></div></noscript>
 </body>
 </html>
