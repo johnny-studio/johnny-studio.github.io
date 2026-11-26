@@ -169,7 +169,10 @@ nav .btn{height:44px;padding:0 20px;font-size:11.5px}
 @media(max-width:900px){.dtl{grid-template-columns:1fr}.dtl-g{aspect-ratio:4/3.6}}
 .oth{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:30px}
 .oth b{font:600 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-right:8px}
-.oth span{border:1px solid var(--line);padding:10px 16px;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--tx2)}
+.oth span,.oth a{border:1px solid var(--line);padding:10px 16px;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--tx2)}
+.oth a{display:inline-flex;align-items:center;gap:8px;border-color:rgba(var(--acc-rgb),.45);color:var(--tx);transition:background .3s,color .3s,border-color .3s}.oth a:after{content:"↗";color:var(--acc);font-size:13px;letter-spacing:0}
+.oth a:hover{background:var(--acc);border-color:var(--acc);color:var(--accInk)}.oth a:hover:after{color:var(--accInk)}
+.oth-n{margin-top:12px;font-size:13px;color:var(--mut)}
 
 /* 22. КАЛЬКУЛЯТОР: готовые варианты + чипы, итог одометром, разница улетает вверх */
 .calc{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(30px,5vw,80px);align-items:start;background:var(--bg2)}
@@ -466,7 +469,8 @@ html.lock{overflow:hidden}
   <article data-r><small>L494 Sport</small><h3>Range Rover Sport</h3><ul><li>Фары в стиле рестайлинга</li><li>Динамические поворотники</li><li>Камеры, доводчики, салон</li></ul></article>
   <article data-r><small>Премиум</small><h3>Другие премиальные модели авто</h3><ul><li>Оклейка цветным и прозрачным полиуретаном с полным разбором и без использования праймера</li><li>Тонировка</li><li>Поправим недочёты за другими мастерами</li></ul></article>
  </div>
- <div class="oth" data-r><b>И другие премиальные марки</b><span>Jaguar</span><span>Mini</span><span>BMW</span><span>Lexus</span><span>Porsche</span><span>Audi</span></div>
+ <div class="oth" data-r><b>И другие премиальные марки</b><span>Jaguar</span><a href="https://t.me/johnnypolishmycar/229" target="_blank" rel="noopener" title="Mini в нашем Telegram-канале">Mini</a><a href="https://t.me/s/johnnypolishmycar?q=BMW" target="_blank" rel="noopener" title="Работы по BMW в нашем Telegram-канале">BMW</a><a href="https://t.me/s/johnnypolishmycar?q=Lexus" target="_blank" rel="noopener" title="Работы по Lexus в нашем Telegram-канале">Lexus</a><span>Porsche</span><a href="https://t.me/s/johnnypolishmycar?q=Audi" target="_blank" rel="noopener" title="Работы по Audi в нашем Telegram-канале">Audi</a></div>
+ <p class="oth-n" data-r>Нажмите на марку, чтобы посмотреть наши работы в Telegram-канале</p>
 </section>
 
 <!-- 22. калькулятор -->
@@ -762,7 +766,7 @@ buildMq();addEventListener('resize',buildMq);
 if(!YM_ID)return;
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
 ym(YM_ID,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-const goal=h=>/t\.me\//.test(h)?'tg':/wa\.me\//.test(h)?'wa':/max\.ru/.test(h)?'max':/^tel:/.test(h)?'call':/rtext=/.test(h)?'route':/yandex\.ru\/maps/.test(h)?'reviews':'';
+const goal=h=>/johnnypolishmycar/.test(h)?'channel':/t\.me\//.test(h)?'tg':/wa\.me\//.test(h)?'wa':/max\.ru/.test(h)?'max':/^tel:/.test(h)?'call':/rtext=/.test(h)?'route':/yandex\.ru\/maps/.test(h)?'reviews':'';
 document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const g=goal(a.getAttribute('href')||a.href);if(g)ym(YM_ID,'reachGoal',g,{page:PAGE})},true);
 // открытие окна записи и выбор в калькуляторе/подборе: интерес до клика по каналу
 document.addEventListener('click',e=>{if(e.target.closest('[data-book]'))ym(YM_ID,'reachGoal','book_open',{page:PAGE});if(e.target.closest('#pre button,.chip,#tabs button'))ym(YM_ID,'reachGoal','calc_use',{page:PAGE})},true);

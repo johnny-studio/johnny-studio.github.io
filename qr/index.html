@@ -99,7 +99,7 @@ document.querySelectorAll('[data-max]').forEach(a=>{if(MAX){a.href=MAX;document.
 if(!YM_ID)return;
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
 ym(YM_ID,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-const goal=h=>/t\.me\//.test(h)?'tg':/wa\.me\//.test(h)?'wa':/max\.ru/.test(h)?'max':/^tel:/.test(h)?'call':/rtext=/.test(h)?'route':/yandex\.ru\/maps/.test(h)?'reviews':'';
+const goal=h=>/johnnypolishmycar/.test(h)?'channel':/t\.me\//.test(h)?'tg':/wa\.me\//.test(h)?'wa':/max\.ru/.test(h)?'max':/^tel:/.test(h)?'call':/rtext=/.test(h)?'route':/yandex\.ru\/maps/.test(h)?'reviews':'';
 document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const g=goal(a.getAttribute('href')||a.href);if(g)ym(YM_ID,'reachGoal',g,{page:PAGE})},true);
 })();
 </script>
